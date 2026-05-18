@@ -10,8 +10,7 @@ import {
   User,
   sendEmailVerification,
   GoogleAuthProvider,
-  signInWithRedirect,   // 👈 Cambiado por signInWithPopup
-  getRedirectResult     // 👈 Añadido para capturar el resultado al volver
+  signInWithPopup     
 } from 'firebase/auth';
 import { collection, query, where, getDocs, setDoc, doc, deleteDoc } from 'firebase/firestore';
 
@@ -204,30 +203,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     });
     return () => unsubscribe();
   }, []);
-
-  // Captura el resultado de la redirección de Google al volver a la web
-  useEffect(() => {
-    const checkRedirect = async () => {
-      try {
-        const result = await getRedirectResult(auth);
-        if (result?.user) {
-          console.log("Sesión recuperada tras redirección:", result.user.email);
-          
-          // 📝 Creamos o actualizamos la ficha del usuario en la colección 'users'
-          await setDoc(doc(db, 'users', result.user.uid), {
-            uid: result.user.uid,
-            email: result.user.email,
-            role: result.user.email?.toLowerCase() === 'jvillaescusam@gmail.com' ? 'teacher' : 'student',
-            createdAt: new Date().toISOString()
-          }, { merge: true }); // El merge asegura que si el maestro entra, no le borre datos extra
-        }
-      } catch (error) {
-        console.error("Error al procesar el retorno de Google:", error);
-      }
-    };
-    checkRedirect();
-  }, []);
-
+  
   const login = async (email: string, pass: string) => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, pass);
@@ -546,7 +522,15 @@ const handleSubmit = async (e: React.FormEvent) => {
     try {
       const provider = new GoogleAuthProvider();
       provider.setCustomParameters({ prompt: 'select_account' });
-      await signInWithRedirect(auth, provider);
+      const result = await signInWithPopup(auth, provider);
+      
+      // 📝 Creamos o actualizamos la ficha del usuario con su rol real al instante
+      await setDoc(doc(db, 'users', result.user.uid), { 
+        uid: result.user.uid, 
+        email: result.user.email,
+        role: result.user.email?.toLowerCase() === 'jvillaescusam@gmail.com' ? 'teacher' : 'student',
+        createdAt: new Date().toISOString()
+      }, { merge: true });
     } catch (error) {
       console.error(error);
       setError('Error al conectar con Google.');
@@ -568,11 +552,11 @@ const handleSubmit = async (e: React.FormEvent) => {
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
           <div className="flex flex-col gap-2">
             <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Email</label>
-            <input type="email" value={email} onChange={e => setEmail(e.target.value)} required className="bg-slate-900 border border-slate-700/50 rounded-xl px-4 py-3 text-sm text-slate-200 outline-none focus:border-blue-500/50 transition-colors" />
+            <input type="email" id="email" name="email" autoComplete="email" value={email} onChange={e => setEmail(e.target.value)} required className="bg-slate-900 border border-slate-700/50 rounded-xl px-4 py-3 text-sm text-slate-200 outline-none focus:border-blue-500/50 transition-colors" />
           </div>
           <div className="flex flex-col gap-2">
             <label className="text-[9px] font-black text-slate-400 uppercase tracking-widest">Contraseña</label>
-            <input type="password" value={password} onChange={e => setPassword(e.target.value)} required className="bg-slate-900 border border-slate-700/50 rounded-xl px-4 py-3 text-sm text-slate-200 outline-none focus:border-blue-500/50 transition-colors" />
+            <input type="password" id="password" name="password" autoComplete="current-password" value={password} onChange={e => setPassword(e.target.value)} required className="bg-slate-900 border border-slate-700/50 rounded-xl px-4 py-3 text-sm text-slate-200 outline-none focus:border-blue-500/50 transition-colors" />
           </div>
 
           {error && <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3 text-center"><span className="text-[10px] font-black text-red-400 uppercase">{error}</span></div>}
