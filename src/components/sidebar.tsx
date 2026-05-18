@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, ListVideo, ShoppingBag, BarChart3, Hammer } from "lucide-react";
+import { Home, ListVideo, ShoppingBag, BarChart3, Hammer, BookOpen } from "lucide-react";
 import { useApp } from "../context/AppContext";
 
 export default function Sidebar() {
@@ -31,6 +31,12 @@ export default function Sidebar() {
       <div className="flex flex-col gap-5 flex-1 w-full items-center">
         <Link href="/" className={linkClass("/", "text-blue-500")} title="Torre de Control">
           <Home size={22} />
+        </Link>
+
+    
+      
+        <Link href="/practice" className={linkClass("/practice", "text-sky-500")} title="Sala de Práctica">
+          <BookOpen size={22} />
         </Link>
         
         <Link href="/library" className={linkClass("/library", "text-sky-500")} title="Biblioteca de Consulta">
