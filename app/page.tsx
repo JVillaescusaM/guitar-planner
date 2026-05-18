@@ -7,7 +7,7 @@ import SessionInspector from '../src/components/SessionInspector';
 export default function Dashboard() {
   const router = useRouter();
 // Traemos 'logout', 'user' y 'savedRoutines' del contexto
-  const { sessionHistory, removeSessionRecord, loadRoutine, setActiveSessionId, logout, user, savedRoutines } = useApp();
+  const { sessionHistory, removeSessionRecord, loadRoutine, setActiveSessionId, logout, user } = useApp();
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(new Date());
   

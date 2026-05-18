@@ -2,7 +2,6 @@ import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
-// El objeto de configuración ahora lee de forma segura las variables de entorno
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -12,10 +11,15 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID
 };
 
-// Inicializamos Firebase de forma segura para Next.js (evita errores de duplicados al recargar en desarrollo)
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+// 🛡️ CONTROL DE SEGURIDAD PARA COMPILACIÓN (BUILD)
+// Si no hay API Key (como pasa en el renderizado de servidor en Vercel), 
+// creamos un objeto vacío temporal para que Next.js compile sin colapsar.
+const isConfigValid = !!firebaseConfig.apiKey;
 
-// Exportamos las herramientas listas y protegidas
+const app = !getApps().length 
+  ? initializeApp(isConfigValid ? firebaseConfig : { apiKey: "placeholder-build" }) 
+  : getApp();
+
 const auth = getAuth(app);
 const db = getFirestore(app);
 
