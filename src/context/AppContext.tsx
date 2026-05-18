@@ -10,7 +10,8 @@ import {
   User,
   sendEmailVerification,
   GoogleAuthProvider,
-  signInWithPopup
+  signInWithRedirect,   // 👈 Cambiado por signInWithPopup
+  getRedirectResult     // 👈 Añadido para capturar el resultado al volver
 } from 'firebase/auth';
 import { collection, query, where, getDocs, setDoc, doc, deleteDoc } from 'firebase/firestore';
 
@@ -202,6 +203,29 @@ export function AppProvider({ children }: { children: ReactNode }) {
       setLoadingAuth(false);
     });
     return () => unsubscribe();
+  }, []);
+
+  // Captura el resultado de la redirección de Google al volver a la web
+  useEffect(() => {
+    const checkRedirect = async () => {
+      try {
+        const result = await getRedirectResult(auth);
+        if (result?.user) {
+          console.log("Sesión recuperada tras redirección:", result.user.email);
+          
+          // 📝 Creamos o actualizamos la ficha del usuario en la colección 'users'
+          await setDoc(doc(db, 'users', result.user.uid), {
+            uid: result.user.uid,
+            email: result.user.email,
+            role: result.user.email?.toLowerCase() === 'jvillaescusam@gmail.com' ? 'teacher' : 'student',
+            createdAt: new Date().toISOString()
+          }, { merge: true }); // El merge asegura que si el maestro entra, no le borre datos extra
+        }
+      } catch (error) {
+        console.error("Error al procesar el retorno de Google:", error);
+      }
+    };
+    checkRedirect();
   }, []);
 
   const login = async (email: string, pass: string) => {
@@ -521,12 +545,8 @@ const handleSubmit = async (e: React.FormEvent) => {
     setLoading(true);
     try {
       const provider = new GoogleAuthProvider();
-      const result = await signInWithPopup(auth, provider);
-      
-      await setDoc(doc(db, 'users', result.user.uid), { 
-        uid: result.user.uid, 
-        email: result.user.email 
-      }, { merge: true });
+      provider.setCustomParameters({ prompt: 'select_account' });
+      await signInWithRedirect(auth, provider);
     } catch (error) {
       console.error(error);
       setError('Error al conectar con Google.');
