@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import { useApp, type Exercise, type ExerciseStats, type SessionRecord } from '../../src/context/AppContext';
+import { useRouter } from 'next/navigation';
 
 interface WindowWithAudio extends Window {
   webkitAudioContext: typeof AudioContext;
@@ -21,6 +22,7 @@ const techniqueColors: Record<string, string> = {
 };
 
 export default function Home() {
+  const router = useRouter();
   const { 
     activeExercise, 
     setActiveExercise, 
@@ -181,10 +183,11 @@ export default function Home() {
       playNext();
     } else {
       setActiveSessionId(null); 
-      alert(`¡Entrenamiento Completado!\nHas ganado ${earnedXP} XP.`);
+      stateSnapshot.current.activeSessionId = null; 
       setTimerActive(false);
       clearRoutine(); 
-      window.location.href = '/';
+      alert(`¡Entrenamiento Completado!\nHas ganado ${earnedXP} XP.`);
+      router.push('/'); // 👈 Viaje suave a la Torre de Control sin cortar el cable de red
     }
   };
 
@@ -213,10 +216,11 @@ export default function Home() {
       }
     }
     setActiveSessionId(null);
+    stateSnapshot.current.activeSessionId = null; 
     setTimerActive(false);
     setTime(0);
     clearRoutine();
-    window.location.href = '/';
+    router.push('/'); // 👈 Viaje suave
   };
 
   useEffect(() => {
