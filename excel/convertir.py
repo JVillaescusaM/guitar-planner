@@ -33,8 +33,9 @@ def convertir_a_json(archivo_entrada, archivo_salida):
             ]
             objetivos_limpios = [obj for obj in objetivos_brutos if obj.lower() != 'nan' and obj]
 
-            # Aquí está la magia: buscamos por los nombres correctos de tu Excel actual
-            id_ejercicio = str(row.get('ID', row.get('CÓDIGO', ''))).strip()
+           # Extraemos el ID y si Excel lo ha exportado como un decimal (ej: 1101.0), le quitamos el .0 de cuajo
+            id_raw = str(row.get('ID', row.get('CÓDIGO', ''))).strip()
+            id_ejercicio = id_raw.split('.')[0] if id_raw.endswith('.0') else id_raw
             
             ejercicio = {
                 "id": id_ejercicio,
