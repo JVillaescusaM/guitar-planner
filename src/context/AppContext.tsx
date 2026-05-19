@@ -26,7 +26,10 @@ export interface Exercise {
   description: string;
   objectives: string[];
   pdfUrl: string;
-  subdivision?: number; // NUEVO: 1=Negras, 2=Corcheas, 3=Tresillos, 4=Semicorcheas
+  subdivision?: number; // 1=Negras, 2=Corcheas, 3=Tresillos, 4=Semicorcheas
+  collection?: string;
+  videoId?: string;
+  recommendedBpm?: number;
 }
 
 export interface ExerciseStats {
@@ -203,7 +206,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     });
     return () => unsubscribe();
   }, []);
-  
+
   const login = async (email: string, pass: string) => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, pass);

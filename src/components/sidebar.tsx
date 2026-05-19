@@ -33,23 +33,25 @@ export default function Sidebar() {
           <Home size={22} />
         </Link>
 
-    
-      
-        <Link href="/practice" className={linkClass("/practice", "text-sky-500")} title="Sala de Práctica">
-          <BookOpen size={22} />
+            <Link href="/profile" className={linkClass("/profile", "text-amber-500")} title="Mi Perfil y Estadísticas">
+          <BarChart3 size={22} />
         </Link>
-        
-        <Link href="/library" className={linkClass("/library", "text-sky-500")} title="Biblioteca de Consulta">
-          <ListVideo size={22} />
-        </Link>
-        
+
         <Link href="/catalog" className={linkClass("/catalog", "text-purple-500")} title="Catálogo de Planes">
           <ShoppingBag size={22} />
         </Link>
-        
-        <Link href="/profile" className={linkClass("/profile", "text-amber-500")} title="Mi Perfil y Estadísticas">
-          <BarChart3 size={22} />
+      
+        <Link href="/practice" className={linkClass("/practice", "text-sky-500")} title="Sala de Práctica">
+          <ListVideo size={22} />
         </Link>
+        
+        <Link href="/library" className={linkClass("/library", "text-sky-500")} title="Biblioteca de Consulta">
+          <BookOpen size={22} />
+        </Link>
+        
+        
+        
+
 
         {/* SEPARADOR VISUAL ANTES DEL MODO MAESTRO */}
         {isMaster && <div className="w-8 h-px bg-slate-800/60 my-2" />}
