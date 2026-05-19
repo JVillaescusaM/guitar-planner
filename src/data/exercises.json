@@ -1,6 +1,6 @@
 [
     {
-        "id": "1101",
+        "id": "1101.0",
         "title": "ENTRI PRIMER LIGADO",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -12,14 +12,14 @@
             "FUERZA",
             "RITMO"
         ],
-        "pdfUrl": "/pdfs/1101.pdf",
+        "pdfUrl": "/pdfs/1101.0.pdf",
         "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1102",
+        "id": "1102.0",
         "title": "ENTRI SEGUNDO LIGADO",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -30,14 +30,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/1102.pdf",
+        "pdfUrl": "/pdfs/1102.0.pdf",
         "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1103",
+        "id": "1103.0",
         "title": "ENTRI TERCER LIGADO",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -48,14 +48,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/1103.pdf",
+        "pdfUrl": "/pdfs/1103.0.pdf",
         "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1104",
+        "id": "1104.0",
         "title": "ENTRI CUARTO LIGADO Sanlucar a una cuerda",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -66,14 +66,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/1104.pdf",
+        "pdfUrl": "/pdfs/1104.0.pdf",
         "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1105",
+        "id": "1105.0",
         "title": "ENTRI QUINTO LIGADO El cansino 10101010…",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -84,14 +84,14 @@
         "objectives": [
             "DEDO CAMBIADO"
         ],
-        "pdfUrl": "/pdfs/1105.pdf",
+        "pdfUrl": "/pdfs/1105.0.pdf",
         "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1106",
+        "id": "1106.0",
         "title": "ENTRI SEXTO LIGADO",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -102,14 +102,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/1106.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/1106.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1107",
+        "id": "1107.0",
         "title": "ENTRI SEPTIMO LIGADO",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -120,14 +120,14 @@
         "objectives": [
             "VELOCIDAD"
         ],
-        "pdfUrl": "/pdfs/1107.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/1107.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1108",
+        "id": "1108.0",
         "title": "ENTRI OCTAVO LIGADO",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -138,14 +138,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/1108.pdf",
+        "pdfUrl": "/pdfs/1108.0.pdf",
         "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1201",
+        "id": "1201.0",
         "title": "OSCAR HERRERO DEDOS SEPARADOS COMBINACIONES",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -156,14 +156,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/1201.pdf",
+        "pdfUrl": "/pdfs/1201.0.pdf",
         "subdivision": 2,
         "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1202",
+        "id": "1202.0",
         "title": "OSCAR HERRERO DEDOS SEPARADOS HAMMER ON",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -174,14 +174,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/1202.pdf",
+        "pdfUrl": "/pdfs/1202.0.pdf",
         "subdivision": 2,
         "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1301",
+        "id": "1301.0",
         "title": "LIGADOS ROCKABILLY",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -192,14 +192,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/1301.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/1301.0.pdf",
+        "subdivision": 3,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1302",
+        "id": "1302.0",
         "title": "LIGADOS SANLUCAR",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -210,14 +210,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/1302.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/1302.0.pdf",
+        "subdivision": 3,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1303",
+        "id": "1303.0",
         "title": "LIGADOS TIRANDO ACORDE",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -228,14 +228,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/1303.pdf",
+        "pdfUrl": "/pdfs/1303.0.pdf",
         "subdivision": 4,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1304",
+        "id": "1304.0",
         "title": "PICADO CON LIGADO",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -246,14 +246,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/1304.pdf",
+        "pdfUrl": "/pdfs/1304.0.pdf",
         "subdivision": 4,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1305",
+        "id": "1305.0",
         "title": "LIGADO ROCKABILLY AMPLIADO",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -264,14 +264,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/1305.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/1305.0.pdf",
+        "subdivision": 3,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1306",
+        "id": "1306.0",
         "title": "LIGADOS PIRATAS",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -282,14 +282,14 @@
         "objectives": [
             "DEDO CAMBIADO"
         ],
-        "pdfUrl": "/pdfs/1306.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/1306.0.pdf",
+        "subdivision": 3,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1307",
+        "id": "1307.0",
         "title": "LIGADOS CASTILLO",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -300,14 +300,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/1307.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/1307.0.pdf",
+        "subdivision": 3,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1308",
+        "id": "1308.0",
         "title": "LIGADOS DESCENDENTES",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -318,14 +318,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/1308.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/1308.0.pdf",
+        "subdivision": 3,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1309",
+        "id": "1309.0",
         "title": "PULLOFF APERTURAS",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -336,14 +336,14 @@
         "objectives": [
             "VELOCIDAD"
         ],
-        "pdfUrl": "/pdfs/1309.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/1309.0.pdf",
+        "subdivision": 2,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1310",
+        "id": "1310.0",
         "title": "AUMENTADO LIGADOS TIRANDO ACORDE",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -354,14 +354,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/1310.pdf",
+        "pdfUrl": "/pdfs/1310.0.pdf",
         "subdivision": 4,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1311",
+        "id": "1311.0",
         "title": "LIGADOS APERTURA ELÉCTRICA",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -372,14 +372,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/1311.pdf",
+        "pdfUrl": "/pdfs/1311.0.pdf",
         "subdivision": 4,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "1312",
+        "id": "1312.0",
         "title": "LIGADOS DOBLES EN SOL",
         "repetitions": "1",
         "mainTechnique": "LIGADO",
@@ -390,14 +390,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/1312.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/1312.0.pdf",
+        "subdivision": 4,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2101",
+        "id": "2101.0",
         "title": "MEZCLA DE PULGAR Y PICADO (VOLUMEN)",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
@@ -408,14 +408,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/2101.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/2101.0.pdf",
+        "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2102",
+        "id": "2102.0",
         "title": "EJERCICIO PULGAR PIVOTES 4 3 4 2 4 3 4 1",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
@@ -426,14 +426,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/2102.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/2102.0.pdf",
+        "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2103",
+        "id": "2103.0",
         "title": "PULGAR CROMÁTICO SEISILLOS",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
@@ -444,15 +444,15 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/2103.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/2103.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2104",
-        "title": "EJERCICIO PUNTERIA MELON",
+        "id": "2104.0",
+        "title": "SOBRINO ENTRI SALTOS PULGAR",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
         "secondaryTechnique": "",
@@ -462,15 +462,15 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/2104.pdf",
+        "pdfUrl": "/pdfs/2104.0.pdf",
         "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2105",
-        "title": "SOBRINO ENTRI SALTOS PULGAR",
+        "id": "2105.0",
+        "title": "PULGAR CON ÍNDICE",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
         "secondaryTechnique": "",
@@ -480,15 +480,15 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/2105.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/2105.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2106",
-        "title": "PULGAR CON ÍNDICE",
+        "id": "2106.0",
+        "title": "EJERCICIO PUNTERIA MELON",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
         "secondaryTechnique": "",
@@ -498,14 +498,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/2106.pdf",
-        "subdivision": 6,
+        "pdfUrl": "/pdfs/2106.0.pdf",
+        "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2201",
+        "id": "2201.0",
         "title": "PULGAR ASCENDENTE DESCENDENTE",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
@@ -516,14 +516,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/2201.pdf",
-        "subdivision": 6,
+        "pdfUrl": "/pdfs/2201.0.pdf",
+        "subdivision": 4,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2202",
+        "id": "2202.0",
         "title": "PULGAR TRESILLOS",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
@@ -534,14 +534,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/2202.pdf",
+        "pdfUrl": "/pdfs/2202.0.pdf",
         "subdivision": 6,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2203",
+        "id": "2203.0",
         "title": "PIRMER PULGAR EN SOL REPITE DESCENDENTE ASCENDENTE",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
@@ -552,14 +552,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/2203.pdf",
-        "subdivision": 6,
+        "pdfUrl": "/pdfs/2203.0.pdf",
+        "subdivision": 3,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2204",
+        "id": "2204.0",
         "title": "SEGUNDO PULGAR EN SOL",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
@@ -570,14 +570,14 @@
         "objectives": [
             "DEDO CAMBIADO"
         ],
-        "pdfUrl": "/pdfs/2204.pdf",
-        "subdivision": 5,
+        "pdfUrl": "/pdfs/2204.0.pdf",
+        "subdivision": 3,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2205",
+        "id": "2205.0",
         "title": "PULGAR POR RUMBA Am",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
@@ -588,14 +588,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/2205.pdf",
-        "subdivision": 5,
+        "pdfUrl": "/pdfs/2205.0.pdf",
+        "subdivision": 2,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2206",
+        "id": "2206.0",
         "title": "PULGAR LATIN",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
@@ -606,15 +606,15 @@
         "objectives": [
             "VELOCIDAD"
         ],
-        "pdfUrl": "/pdfs/2206.pdf",
-        "subdivision": 5,
+        "pdfUrl": "/pdfs/2206.0.pdf",
+        "subdivision": 4,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2207",
-        "title": "PULGAR EN A",
+        "id": "2207.0",
+        "title": "PULGAR AVENTURA",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
         "secondaryTechnique": "",
@@ -624,15 +624,15 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/2207.pdf",
-        "subdivision": 7,
+        "pdfUrl": "/pdfs/2207.0.pdf",
+        "subdivision": 3,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2208",
-        "title": "PULGAR AVENTURA",
+        "id": "2208.0",
+        "title": "PULGAR CLÁSICO GERARDO NUÑEZ",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
         "secondaryTechnique": "",
@@ -642,15 +642,15 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/2208.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/2208.0.pdf",
+        "subdivision": 2,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2209",
-        "title": "PULGAR CLÁSICO GERARDO NUÑEZ",
+        "id": "2209.0",
+        "title": "PULGAR EN A",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
         "secondaryTechnique": "",
@@ -660,14 +660,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/2209.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/2209.0.pdf",
+        "subdivision": 1,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2301",
+        "id": "2301.0",
         "title": "UN GOLPE POR CUERDA GRUPO CASCADA",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
@@ -678,14 +678,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/2301.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/2301.0.pdf",
+        "subdivision": 3,
         "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2302",
+        "id": "2302.0",
         "title": "DOS GOLPES POR CUERDA G2",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
@@ -696,14 +696,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/2302.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/2302.0.pdf",
+        "subdivision": 2,
         "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2303",
+        "id": "2303.0",
         "title": "TRESILLOS CON DOS CUERDAS",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
@@ -714,14 +714,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/2303.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/2303.0.pdf",
+        "subdivision": 3,
         "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2304",
+        "id": "2304.0",
         "title": "CROMÁTICO A UNA CUERDA",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
@@ -732,104 +732,104 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/2304.pdf",
+        "pdfUrl": "/pdfs/2304.0.pdf",
         "subdivision": 4,
         "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2305",
+        "id": "2305.0",
         "title": "PULGAR ÍNDICE AL AIRE CAMBIANDO ÍNDICE",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
-        "secondaryTechnique": "",
+        "secondaryTechnique": "PULGAR CON ÍNDICE",
         "level": "2",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/2305.pdf",
+        "pdfUrl": "/pdfs/2305.0.pdf",
         "subdivision": 4,
         "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2306",
+        "id": "2306.0",
         "title": "PULGAR ÍNDICE ESCALA CROMÁTICA CAMBIANDO ÍNDICE",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
-        "secondaryTechnique": "",
+        "secondaryTechnique": "PULGAR CON ÍNDICE",
         "level": "3",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "DEDO CAMBIADO"
         ],
-        "pdfUrl": "/pdfs/2306.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/2306.0.pdf",
+        "subdivision": 4,
         "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2307",
+        "id": "2307.0",
         "title": "PULGAR ÍNDICE SIMULTÁNEO OCTAVAS",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
-        "secondaryTechnique": "",
+        "secondaryTechnique": "PULGAR CON ÍNDICE",
         "level": "3",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/2307.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/2307.0.pdf",
+        "subdivision": 2,
         "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2308",
+        "id": "2308.0",
         "title": "PULGAR ÍNDICE ARRASTRADO AL AIRE",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
-        "secondaryTechnique": "",
+        "secondaryTechnique": "PULGAR CON ÍNDICE",
         "level": "5",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/2308.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/2308.0.pdf",
+        "subdivision": 6,
         "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "2309",
+        "id": "2309.0",
         "title": "PULGAR ÍNDICE ARRASTRADO CROMÁTICA",
         "repetitions": "1",
         "mainTechnique": "PULGAR",
-        "secondaryTechnique": "",
+        "secondaryTechnique": "PULGAR CON ÍNDICE",
         "level": "4",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "VELOCIDAD"
         ],
-        "pdfUrl": "/pdfs/2309.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/2309.0.pdf",
+        "subdivision": 4,
         "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "3101",
+        "id": "3101.0",
         "title": "ALZAPUA ENTRI (X3)",
         "repetitions": "1",
         "mainTechnique": "ALZAPUA",
@@ -840,14 +840,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/3101.pdf",
+        "pdfUrl": "/pdfs/3101.0.pdf",
         "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "3201",
+        "id": "3201.0",
         "title": "ALZAPUA UNA CUERDA BORDON",
         "repetitions": "1",
         "mainTechnique": "ALZAPUA",
@@ -858,14 +858,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/3201.pdf",
+        "pdfUrl": "/pdfs/3201.0.pdf",
         "subdivision": 3,
-        "collection": "ENTRI",
+        "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "3202",
+        "id": "3202.0",
         "title": "PRIMER ALZAPUA",
         "repetitions": "1",
         "mainTechnique": "ALZAPUA",
@@ -876,14 +876,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/3202.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/3202.0.pdf",
+        "subdivision": 4,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "3203",
+        "id": "3203.0",
         "title": "SEGUNDO ALZAPUA EN DO",
         "repetitions": "1",
         "mainTechnique": "ALZAPUA",
@@ -894,14 +894,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/3203.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/3203.0.pdf",
+        "subdivision": 4,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "3204",
+        "id": "3204.0",
         "title": "ALZAPUA CLASICO GERARDO NUÑEZ",
         "repetitions": "1",
         "mainTechnique": "ALZAPUA",
@@ -912,14 +912,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/3204.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/3204.0.pdf",
+        "subdivision": 6,
         "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "3301",
+        "id": "3301.0",
         "title": "ALZAPUA CON DOBLE BORDON SOLO PULGAR UNA CUERDA",
         "repetitions": "1",
         "mainTechnique": "ALZAPUA",
@@ -930,14 +930,14 @@
         "objectives": [
             "RITMO"
         ],
-        "pdfUrl": "/pdfs/3301.pdf",
+        "pdfUrl": "/pdfs/3301.0.pdf",
         "subdivision": 3,
-        "collection": "JAVIER CONDE",
+        "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "3302",
+        "id": "3302.0",
         "title": "ALZAPUA CON DOBLE BORDON CROMÁTICO",
         "repetitions": "1",
         "mainTechnique": "ALZAPUA",
@@ -948,14 +948,14 @@
         "objectives": [
             "RITMO"
         ],
-        "pdfUrl": "/pdfs/3302.pdf",
-        "subdivision": 3,
-        "collection": "JAVIER CONDE",
+        "pdfUrl": "/pdfs/3302.0.pdf",
+        "subdivision": 4,
+        "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "3303",
+        "id": "3303.0",
         "title": "ALZAPUA CON DOBLE BORDON GOLPE CROMÁTICO",
         "repetitions": "1",
         "mainTechnique": "ALZAPUA",
@@ -966,14 +966,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/3303.pdf",
-        "subdivision": 2,
-        "collection": "JAVIER CONDE",
+        "pdfUrl": "/pdfs/3303.0.pdf",
+        "subdivision": 4,
+        "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "3304",
+        "id": "3304.0",
         "title": "ALZAPUA CON BORDON LIGADO CROMÁTICO",
         "repetitions": "1",
         "mainTechnique": "ALZAPUA",
@@ -984,14 +984,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/3304.pdf",
-        "subdivision": 3,
-        "collection": "JAVIER CONDE",
+        "pdfUrl": "/pdfs/3304.0.pdf",
+        "subdivision": 4,
+        "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "3305",
+        "id": "3305.0",
         "title": "ALZAPUA CON BORDON LIGADO GOLPE CROMÁTICO",
         "repetitions": "1",
         "mainTechnique": "ALZAPUA",
@@ -1002,14 +1002,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/3305.pdf",
-        "subdivision": 3,
-        "collection": "JAVIER CONDE",
+        "pdfUrl": "/pdfs/3305.0.pdf",
+        "subdivision": 4,
+        "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "3401",
+        "id": "3401.0",
         "title": "CÉLULAS IMPULSO SOBRE DO",
         "repetitions": "1",
         "mainTechnique": "ALZAPUA",
@@ -1020,14 +1020,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/3401.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/3401.0.pdf",
+        "subdivision": 1,
         "collection": "NIÑO DE PURA",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "3402",
+        "id": "3402.0",
         "title": "ESTUDIO EN Em",
         "repetitions": "1",
         "mainTechnique": "ALZAPUA",
@@ -1038,14 +1038,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/3402.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/3402.0.pdf",
+        "subdivision": 4,
         "collection": "NIÑO DE PURA",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4101",
+        "id": "4101.0",
         "title": "PRIMERA ESCALA VERTICAL",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1056,14 +1056,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/4101.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/4101.0.pdf",
+        "subdivision": 6,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4102",
+        "id": "4102.0",
         "title": "SEGUNDA ESCALA OBLICUA",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1074,14 +1074,14 @@
         "objectives": [
             "DEDO CAMBIADO"
         ],
-        "pdfUrl": "/pdfs/4102.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/4102.0.pdf",
+        "subdivision": 6,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4103",
+        "id": "4103.0",
         "title": "TERCERA ESCALA GRANAINA",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1092,14 +1092,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4103.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/4103.0.pdf",
+        "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4104",
+        "id": "4104.0",
         "title": "CUARTA ESCALA ENTRE DOS AGUAS",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1110,14 +1110,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4104.pdf",
+        "pdfUrl": "/pdfs/4104.0.pdf",
         "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4105",
+        "id": "4105.0",
         "title": "QUINTA ESCALA HORIZONTAL",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1128,32 +1128,32 @@
         "objectives": [
             "VELOCIDAD"
         ],
-        "pdfUrl": "/pdfs/4105.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/4105.0.pdf",
+        "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4106",
+        "id": "4106.0",
         "title": "SEXTA ESCALA DE DO",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
-        "secondaryTechnique": "",
+        "secondaryTechnique": "PICADO CON SALTO",
         "level": "2",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/4106.pdf",
-        "subdivision": 5,
+        "pdfUrl": "/pdfs/4106.0.pdf",
+        "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4107",
+        "id": "4107.0",
         "title": "SEPTIMA ESCALA WHOLE TONE",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1164,14 +1164,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4107.pdf",
-        "subdivision": 5,
+        "pdfUrl": "/pdfs/4107.0.pdf",
+        "subdivision": 1,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4108",
+        "id": "4108.0",
         "title": "OCTAVA ESCALA VERTICAL HORIZONTAL",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1182,14 +1182,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4108.pdf",
-        "subdivision": 5,
+        "pdfUrl": "/pdfs/4108.0.pdf",
+        "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4109",
+        "id": "4109.0",
         "title": "NOVENA ESCALA ARABE",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1200,14 +1200,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4109.pdf",
-        "subdivision": 5,
+        "pdfUrl": "/pdfs/4109.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4110",
+        "id": "4110.0",
         "title": "PICADO UNDOSTRES",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1218,14 +1218,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4110.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/4110.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4111",
+        "id": "4111.0",
         "title": "PICADO 4' 1' 0'",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1236,14 +1236,14 @@
         "objectives": [
             "RITMO"
         ],
-        "pdfUrl": "/pdfs/4111.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/4111.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4112",
+        "id": "4112.0",
         "title": "PRIMERA ESCALA CROMÁTICA",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1254,14 +1254,14 @@
         "objectives": [
             "RITMO"
         ],
-        "pdfUrl": "/pdfs/4112.pdf",
+        "pdfUrl": "/pdfs/4112.0.pdf",
         "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4113",
+        "id": "4113.0",
         "title": "SEGUNDA ESCALA CROMÁTICA",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1272,14 +1272,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4113.pdf",
+        "pdfUrl": "/pdfs/4113.0.pdf",
         "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4114",
+        "id": "4114.0",
         "title": "TERCERA ESCALA CROMÁTICA",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1290,14 +1290,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4114.pdf",
+        "pdfUrl": "/pdfs/4114.0.pdf",
         "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4115",
+        "id": "4115.0",
         "title": "PICADO ESCALA COMPLETA",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1308,14 +1308,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4115.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/4115.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4116",
+        "id": "4116.0",
         "title": "PICADO CUERDAS ALTERNAS",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1326,14 +1326,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4116.pdf",
+        "pdfUrl": "/pdfs/4116.0.pdf",
         "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4117",
+        "id": "4117.0",
         "title": "PICADO ESCALA GRUPOS DE 4 Am",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1344,14 +1344,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4117.pdf",
+        "pdfUrl": "/pdfs/4117.0.pdf",
         "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4118",
+        "id": "4118.0",
         "title": "PICADO ARAÑA RARA",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1362,14 +1362,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/4118.pdf",
+        "pdfUrl": "/pdfs/4118.0.pdf",
         "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4119",
+        "id": "4119.0",
         "title": "PICADO APERTURAS Y NEGATIVO",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1380,14 +1380,14 @@
         "objectives": [
             "DEDO CAMBIADO"
         ],
-        "pdfUrl": "/pdfs/4119.pdf",
+        "pdfUrl": "/pdfs/4119.0.pdf",
         "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4120",
+        "id": "4120.0",
         "title": "PICADO MCHAULING VALS 2 CUERDAS",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1398,14 +1398,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4120.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/4120.0.pdf",
+        "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4121",
+        "id": "4121.0",
         "title": "PICADO MCLAUGHLIN VALS ESCALERA",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1416,14 +1416,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4121.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/4121.0.pdf",
+        "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4122",
+        "id": "4122.0",
         "title": "PICADO MCLAUGHLIN RETROCESO",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1434,14 +1434,14 @@
         "objectives": [
             "VELOCIDAD"
         ],
-        "pdfUrl": "/pdfs/4122.pdf",
+        "pdfUrl": "/pdfs/4122.0.pdf",
         "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4123",
+        "id": "4123.0",
         "title": "PICADO MCLAUGHLIN APERTURAS",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1452,14 +1452,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/4123.pdf",
+        "pdfUrl": "/pdfs/4123.0.pdf",
         "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4124",
+        "id": "4124.0",
         "title": "PICADO MOSQUITO SEGUIRILLA",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1470,14 +1470,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4124.pdf",
+        "pdfUrl": "/pdfs/4124.0.pdf",
         "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4125",
+        "id": "4125.0",
         "title": "PICADO EXPLOSIVO CORAZÓN",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1488,14 +1488,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4125.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/4125.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4126",
+        "id": "4126.0",
         "title": "ARPEGGIO EXPLOSIVO ANULAR",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1506,14 +1506,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4126.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/4126.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4127",
+        "id": "4127.0",
         "title": "ARPEGGIO EXPLOSIVO ALTERNO",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1524,14 +1524,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4127.pdf",
+        "pdfUrl": "/pdfs/4127.0.pdf",
         "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4128",
+        "id": "4128.0",
         "title": "ARPEGGIO EXPLOSIVO MEZCLADO",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1542,14 +1542,14 @@
         "objectives": [
             "RITMO"
         ],
-        "pdfUrl": "/pdfs/4128.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/4128.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4129",
+        "id": "4129.0",
         "title": "PICADO NEGATIVO POSITIVO TIRANDO",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1560,14 +1560,14 @@
         "objectives": [
             "RITMO"
         ],
-        "pdfUrl": "/pdfs/4129.pdf",
+        "pdfUrl": "/pdfs/4129.0.pdf",
         "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4130",
+        "id": "4130.0",
         "title": "ESCALA DO CON CORCHEAS",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1578,14 +1578,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4130.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/4130.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4201",
+        "id": "4201.0",
         "title": "PICADO SABICAS",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1596,14 +1596,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/4201.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/4201.0.pdf",
+        "subdivision": 4,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4202",
+        "id": "4202.0",
         "title": "PICADO POSITIVO NEGATIVO",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1614,14 +1614,14 @@
         "objectives": [
             "DEDO CAMBIADO"
         ],
-        "pdfUrl": "/pdfs/4202.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/4202.0.pdf",
+        "subdivision": 3,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4203",
+        "id": "4203.0",
         "title": "PICADO VAILA EL VALS",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1632,14 +1632,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4203.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/4203.0.pdf",
+        "subdivision": 4,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4204",
+        "id": "4204.0",
         "title": "PICADO VAILA EL VALS DOS CUERDAS",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1650,14 +1650,14 @@
         "objectives": [
             "VELOCIDAD"
         ],
-        "pdfUrl": "/pdfs/4204.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/4204.0.pdf",
+        "subdivision": 2,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4205",
+        "id": "4205.0",
         "title": "PICADO VAILA EL VALS DOS CUERDAS INVERTIDO",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1668,14 +1668,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/4205.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/4205.0.pdf",
+        "subdivision": 2,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4206",
+        "id": "4206.0",
         "title": "PICADO PRIMER MOSQUITO",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1686,50 +1686,50 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4206.pdf",
+        "pdfUrl": "/pdfs/4206.0.pdf",
         "subdivision": 4,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4207",
+        "id": "4207.0",
         "title": "PICADO CON BORDON MINERA",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
-        "secondaryTechnique": "",
+        "secondaryTechnique": "PICADO CON BORDÓN",
         "level": "2",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4207.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/4207.0.pdf",
+        "subdivision": 2,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4208",
+        "id": "4208.0",
         "title": "PICADO CON BORDÓN MELANCOLÍA",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
-        "secondaryTechnique": "",
+        "secondaryTechnique": "PICADO CON BORDÓN",
         "level": "1",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4208.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/4208.0.pdf",
+        "subdivision": 3,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4209",
+        "id": "4209.0",
         "title": "PICADO REPENTES",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1740,14 +1740,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4209.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/4209.0.pdf",
+        "subdivision": 1,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4210",
+        "id": "4210.0",
         "title": "PICADO RUMBA EN Am",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1758,14 +1758,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4210.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/4210.0.pdf",
+        "subdivision": 2,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4211",
+        "id": "4211.0",
         "title": "PICADO BARRE EN E",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1776,14 +1776,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4211.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/4211.0.pdf",
+        "subdivision": 6,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4212",
+        "id": "4212.0",
         "title": "PICADO BARRE EN G#",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1794,14 +1794,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/4212.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/4212.0.pdf",
+        "subdivision": 6,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4213",
+        "id": "4213.0",
         "title": "PICADO BORDONEO",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1812,14 +1812,14 @@
         "objectives": [
             "DEDO CAMBIADO"
         ],
-        "pdfUrl": "/pdfs/4213.pdf",
+        "pdfUrl": "/pdfs/4213.0.pdf",
         "subdivision": 4,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4214",
+        "id": "4214.0",
         "title": "PICADO VÉRTIGO",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1830,14 +1830,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4214.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/4214.0.pdf",
+        "subdivision": 3,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4215",
+        "id": "4215.0",
         "title": "BATISTA PICADO CON BORDON",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1848,14 +1848,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4215.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/4215.0.pdf",
+        "subdivision": 4,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4301",
+        "id": "4301.0",
         "title": "PICADO CROMÁTICA",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1866,32 +1866,32 @@
         "objectives": [
             "VELOCIDAD"
         ],
-        "pdfUrl": "/pdfs/4301.pdf",
-        "subdivision": 3,
-        "collection": "MIGUEL ANGEL CORTÉS",
+        "pdfUrl": "/pdfs/4301.0.pdf",
+        "subdivision": 4,
+        "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4302",
+        "id": "4302.0",
         "title": "PICADO CON SALTOS EN D (3:53)",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
-        "secondaryTechnique": "",
+        "secondaryTechnique": "PICADO CON SALTO",
         "level": "2",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/4302.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/4302.0.pdf",
+        "subdivision": 4,
         "collection": "MIGUEL ANGEL CORTÉS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4303",
+        "id": "4303.0",
         "title": "PICADO VALS MEÑIQUE (6:30)",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1903,14 +1903,14 @@
             "FUERZA",
             "DEDO CAMBIADO"
         ],
-        "pdfUrl": "/pdfs/4303.pdf",
-        "subdivision": 2,
-        "collection": "MIGUEL ANGEL CORTÉS",
+        "pdfUrl": "/pdfs/4303.0.pdf",
+        "subdivision": 4,
+        "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4401",
+        "id": "4401.0",
         "title": "ESCALA CROMÁTICA COMBINACIONES CON ACENTOS",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1922,14 +1922,14 @@
             "FUERZA",
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4401.pdf",
-        "subdivision": 2,
-        "collection": "OSCAR HERRERO",
+        "pdfUrl": "/pdfs/4401.0.pdf",
+        "subdivision": 4,
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4402",
+        "id": "4402.0",
         "title": "ESCALA FARRUCA CORTA CON ACENTOS",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1941,18 +1941,18 @@
             "VOLUMEN",
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4402.pdf",
-        "subdivision": 2,
-        "collection": "OSCAR HERRERO",
+        "pdfUrl": "/pdfs/4402.0.pdf",
+        "subdivision": 4,
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4403",
+        "id": "4403.0",
         "title": "PICADO ARPEGGIO (668 - 682)",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
-        "secondaryTechnique": "",
+        "secondaryTechnique": "ARPEGIO CON PICADO",
         "level": "1",
         "duration": "00:05:00",
         "description": "",
@@ -1960,14 +1960,14 @@
             "FUERZA",
             "VELOCIDAD"
         ],
-        "pdfUrl": "/pdfs/4403.pdf",
-        "subdivision": 6,
-        "collection": "OSCAR HERRERO",
+        "pdfUrl": "/pdfs/4403.0.pdf",
+        "subdivision": 4,
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4404",
+        "id": "4404.0",
         "title": "PICADO UNO TIRANDO (683 - 692)",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1979,14 +1979,14 @@
             "RITMO",
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/4404.pdf",
-        "subdivision": 6,
-        "collection": "OSCAR HERRERO",
+        "pdfUrl": "/pdfs/4404.0.pdf",
+        "subdivision": 4,
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4405",
+        "id": "4405.0",
         "title": "PICADO DOS TIRANDO (693 - 698)",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -1998,14 +1998,14 @@
             "RITMO",
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4405.pdf",
-        "subdivision": 6,
-        "collection": "OSCAR HERRERO",
+        "pdfUrl": "/pdfs/4405.0.pdf",
+        "subdivision": 4,
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4406",
+        "id": "4406.0",
         "title": "PICADO TRES TIRANDO (699 - 705)",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -2017,14 +2017,14 @@
             "FUERZA",
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4406.pdf",
-        "subdivision": 6,
-        "collection": "OSCAR HERRERO",
+        "pdfUrl": "/pdfs/4406.0.pdf",
+        "subdivision": 4,
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4407",
+        "id": "4407.0",
         "title": "PICADO CUATRO TIRANDO ALEGRÍAS (708 - 713)",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -2036,14 +2036,14 @@
             "VOLUMEN",
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4407.pdf",
-        "subdivision": 5,
-        "collection": "OSCAR HERRERO",
+        "pdfUrl": "/pdfs/4407.0.pdf",
+        "subdivision": 4,
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4501",
+        "id": "4501.0",
         "title": "EJERCICIO PICADO BARROCO",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -2055,14 +2055,14 @@
             "FUERZA",
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4501.pdf",
-        "subdivision": 5,
+        "pdfUrl": "/pdfs/4501.0.pdf",
+        "subdivision": 4,
         "collection": "MIGUEL ANGEL CORTÉS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4502",
+        "id": "4502.0",
         "title": "ESCALA FARRUCA",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -2074,14 +2074,14 @@
             "FUERZA",
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4502.pdf",
-        "subdivision": 5,
+        "pdfUrl": "/pdfs/4502.0.pdf",
+        "subdivision": 4,
         "collection": "MIGUEL ANGEL CORTÉS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4503",
+        "id": "4503.0",
         "title": "ESCALA PAGANINI",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -2092,14 +2092,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4503.pdf",
-        "subdivision": 7,
+        "pdfUrl": "/pdfs/4503.0.pdf",
+        "subdivision": 4,
         "collection": "MIGUEL ANGEL CORTÉS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4504",
+        "id": "4504.0",
         "title": "PICADO CON BORDÓN PIRATAS",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -2110,50 +2110,50 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/4504.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/4504.0.pdf",
+        "subdivision": 3,
         "collection": "MIGUEL ANGEL CORTÉS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4505",
+        "id": "4505.0",
         "title": "PICADO CON BORDÓN CAGED A",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
-        "secondaryTechnique": "",
+        "secondaryTechnique": "PICADO CON BORDÓN",
         "level": "2",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "DEDO CAMBIADO"
         ],
-        "pdfUrl": "/pdfs/4505.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/4505.0.pdf",
+        "subdivision": 2,
         "collection": "MIGUEL ANGEL CORTÉS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4506",
+        "id": "4506.0",
         "title": "PICADO CON BORDÓN LIGADOS MEÑIQUE",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
-        "secondaryTechnique": "",
+        "secondaryTechnique": "PICADO CON BORDÓN",
         "level": "2",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4506.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/4506.0.pdf",
+        "subdivision": 3,
         "collection": "MIGUEL ANGEL CORTÉS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4701",
+        "id": "4701.0",
         "title": "MODOS PRIMERA POSICIÓN CON FIGURAS RÍTMICAS",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -2164,14 +2164,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4701.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/4701.0.pdf",
+        "subdivision": 8,
         "collection": "PEDRO SIERRA",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4702",
+        "id": "4702.0",
         "title": "MODOS CAGED",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -2182,14 +2182,14 @@
         "objectives": [
             "VELOCIDAD"
         ],
-        "pdfUrl": "/pdfs/4702.pdf",
+        "pdfUrl": "/pdfs/4702.0.pdf",
         "subdivision": 4,
         "collection": "PEDRO SIERRA",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4801",
+        "id": "4801.0",
         "title": "PRIMER PICADO PURA - DEDO FLOJO",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -2200,14 +2200,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/4801.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/4801.0.pdf",
+        "subdivision": 1,
         "collection": "NIÑO DE PURA",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4802",
+        "id": "4802.0",
         "title": "SEGUNDO PICADO PURA - NEGATIVO",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -2218,14 +2218,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4802.pdf",
+        "pdfUrl": "/pdfs/4802.0.pdf",
         "subdivision": 4,
         "collection": "NIÑO DE PURA",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4803",
+        "id": "4803.0",
         "title": "TERCER PICADO PURA - PRIMERA ATRESILLADA",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -2236,14 +2236,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/4803.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/4803.0.pdf",
+        "subdivision": 4,
         "collection": "NIÑO DE PURA",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "4804",
+        "id": "4804.0",
         "title": "CUARTO PICADO PURA - IMPULSO",
         "repetitions": "1",
         "mainTechnique": "PICADOS",
@@ -2254,14 +2254,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/4804.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/4804.0.pdf",
+        "subdivision": 6,
         "collection": "NIÑO DE PURA",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "5101",
+        "id": "5101.0",
         "title": "ARPEGIO HENDRIX",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO CON PICADO",
@@ -2272,14 +2272,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/5101.pdf",
+        "pdfUrl": "/pdfs/5101.0.pdf",
         "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "5102",
+        "id": "5102.0",
         "title": "SOBRINO ENTRI EJERCICIO MULTIPLE",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO CON PICADO",
@@ -2290,14 +2290,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/5102.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/5102.0.pdf",
+        "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "5103",
+        "id": "5103.0",
         "title": "ENTRI FALSETA ALEGRÍAS SERRANITO",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO CON PICADO",
@@ -2308,14 +2308,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/5103.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/5103.0.pdf",
+        "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "5201",
+        "id": "5201.0",
         "title": "ARPEGIO CONPICADO E TRISTE",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO CON PICADO",
@@ -2326,14 +2326,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/5201.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/5201.0.pdf",
+        "subdivision": 4,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "5202",
+        "id": "5202.0",
         "title": "ARPEGIO CONPICADO COLOMBIANA",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO CON PICADO",
@@ -2344,14 +2344,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/5202.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/5202.0.pdf",
+        "subdivision": 4,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "5203",
+        "id": "5203.0",
         "title": "ARPEGIO CONPICADO SOLEA SERRANITO",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO CON PICADO",
@@ -2362,14 +2362,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/5203.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/5203.0.pdf",
+        "subdivision": 4,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "5301",
+        "id": "5301.0",
         "title": "TRACK 51- BÁSICO",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO CON PICADO",
@@ -2380,14 +2380,14 @@
         "objectives": [
             "DEDO CAMBIADO"
         ],
-        "pdfUrl": "/pdfs/5301.pdf",
-        "subdivision": 3,
-        "collection": "JUAN SERRANO",
+        "pdfUrl": "/pdfs/5301.0.pdf",
+        "subdivision": 4,
+        "collection": "JUAN LORENZO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "5302",
+        "id": "5302.0",
         "title": "TRACK 52- SALTANDO CUERDA",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO CON PICADO",
@@ -2398,14 +2398,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/5302.pdf",
-        "subdivision": 3,
-        "collection": "JUAN SERRANO",
+        "pdfUrl": "/pdfs/5302.0.pdf",
+        "subdivision": 4,
+        "collection": "JUAN LORENZO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "5303",
+        "id": "5303.0",
         "title": "TRACK 53- CON BAJADA",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO CON PICADO",
@@ -2416,14 +2416,14 @@
         "objectives": [
             "VELOCIDAD"
         ],
-        "pdfUrl": "/pdfs/5303.pdf",
-        "subdivision": 3,
-        "collection": "JUAN SERRANO",
+        "pdfUrl": "/pdfs/5303.0.pdf",
+        "subdivision": 4,
+        "collection": "JUAN LORENZO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "5401",
+        "id": "5401.0",
         "title": "COMPOSICIÓN ARPEGIO CONPICADO",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO CON PICADO",
@@ -2434,14 +2434,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/5401.pdf",
-        "subdivision": 2,
-        "collection": "JUAN SERRANO",
+        "pdfUrl": "/pdfs/5401.0.pdf",
+        "subdivision": 4,
+        "collection": "NIÑO DE PURA",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6101",
+        "id": "6101.0",
         "title": "PRIMER ARPEGIO COMPLETO G1",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2452,14 +2452,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/6101.pdf",
+        "pdfUrl": "/pdfs/6101.0.pdf",
         "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6102",
+        "id": "6102.0",
         "title": "SEGUNDO ARP. CASCADA TIRA G2",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2470,14 +2470,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/6102.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/6102.0.pdf",
+        "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6103",
+        "id": "6103.0",
         "title": "TERCER ARP. CASCADA TIRA SOLO ANULAR G3",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2488,14 +2488,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/6103.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/6103.0.pdf",
+        "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6104",
+        "id": "6104.0",
         "title": "CUARTO ARP. COMPLETO + CASCADA G1",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2506,14 +2506,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/6104.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/6104.0.pdf",
+        "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6105",
+        "id": "6105.0",
         "title": "QUINTO ARP. CLÁSICO1 G2",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2524,14 +2524,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/6105.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/6105.0.pdf",
+        "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6106",
+        "id": "6106.0",
         "title": "SEXTO ARP. REPENTE G3",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2542,14 +2542,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/6106.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/6106.0.pdf",
+        "subdivision": 1,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6107",
+        "id": "6107.0",
         "title": "SEPTIMO ARP. CASCADA PULSA G1",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2560,14 +2560,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/6107.pdf",
+        "pdfUrl": "/pdfs/6107.0.pdf",
         "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6108",
+        "id": "6108.0",
         "title": "OCTAVO ARP. TIRA-PULSA G2",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2578,14 +2578,14 @@
         "objectives": [
             "DEDO CAMBIADO"
         ],
-        "pdfUrl": "/pdfs/6108.pdf",
+        "pdfUrl": "/pdfs/6108.0.pdf",
         "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6109",
+        "id": "6109.0",
         "title": "NOVENO ARP. CLÁSICO2 G3",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2596,14 +2596,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/6109.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/6109.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6110",
+        "id": "6110.0",
         "title": "DÉCIMO ARP. SUBE Y PITO G1",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2614,14 +2614,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/6110.pdf",
-        "subdivision": 5,
+        "pdfUrl": "/pdfs/6110.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6111",
+        "id": "6111.0",
         "title": "UNDECIMO ARP. PICADO ANULAR",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2632,14 +2632,14 @@
         "objectives": [
             "VELOCIDAD"
         ],
-        "pdfUrl": "/pdfs/6111.pdf",
-        "subdivision": 5,
+        "pdfUrl": "/pdfs/6111.0.pdf",
+        "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6112",
+        "id": "6112.0",
         "title": "JESUS DE ROSARIO ARPEGIO SEGUIRILLA",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2650,14 +2650,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/6112.pdf",
-        "subdivision": 5,
+        "pdfUrl": "/pdfs/6112.0.pdf",
+        "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6113",
+        "id": "6113.0",
         "title": "JESUS DE ROSARIO ARPEGIO2 SEGUIRILLA",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2668,14 +2668,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/6113.pdf",
-        "subdivision": 5,
+        "pdfUrl": "/pdfs/6113.0.pdf",
+        "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6114",
+        "id": "6114.0",
         "title": "JUESUS DE ROSARIO COLUMPIO",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2686,14 +2686,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/6114.pdf",
+        "pdfUrl": "/pdfs/6114.0.pdf",
         "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6201",
+        "id": "6201.0",
         "title": "ARPEGIO BARROCO",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2704,33 +2704,33 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/6201.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/6201.0.pdf",
+        "subdivision": 3,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6202",
+        "id": "6202.0",
         "title": "ARPEGIO APERTURAS LARGAS",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
-        "secondaryTechnique": "",
+        "secondaryTechnique": "APERTURAS",
         "level": "2",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/6202.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/6202.0.pdf",
+        "subdivision": 3,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6203",
-        "title": "ARPEGIO BACH",
+        "id": "6203.0",
+        "title": "ARPEGIO APERTURAS LARGAS REPITIENDO PRIMERA",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
         "secondaryTechnique": "",
@@ -2740,15 +2740,15 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/6203.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/6203.0.pdf",
+        "subdivision": 3,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6204",
-        "title": "ARPEGIO COMPLETO",
+        "id": "6204.0",
+        "title": "ARPEGIO BACH",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
         "secondaryTechnique": "",
@@ -2758,15 +2758,15 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/6204.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/6204.0.pdf",
+        "subdivision": 5,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6205",
-        "title": "ARPEGIO CASCADA",
+        "id": "6205.0",
+        "title": "ARPEGIO COMPLETO",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
         "secondaryTechnique": "",
@@ -2776,14 +2776,33 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/6205.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/6205.0.pdf",
+        "subdivision": 6,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6206",
+        "id": "6206.0",
+        "title": "ARPEGIO CASCADA",
+        "repetitions": "1",
+        "mainTechnique": "ARPEGIO",
+        "secondaryTechnique": "",
+        "level": "2",
+        "duration": "00:05:00",
+        "description": "",
+        "objectives": [
+            "FUERZA",
+            "RITMO"
+        ],
+        "pdfUrl": "/pdfs/6206.0.pdf",
+        "subdivision": 1,
+        "collection": "JAVIER CONDE",
+        "videoId": "",
+        "recommendedBpm": 80
+    },
+    {
+        "id": "6207.0",
         "title": "ARPEGIO BURBUJA",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2795,14 +2814,14 @@
             "FUERZA",
             "RITMO"
         ],
-        "pdfUrl": "/pdfs/6206.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/6207.0.pdf",
+        "subdivision": 1,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6301",
+        "id": "6301.0",
         "title": "TRACK 18- DOS DEDOS DES-ASC",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2814,14 +2833,14 @@
             "FUERZA",
             "RITMO"
         ],
-        "pdfUrl": "/pdfs/6301.pdf",
-        "subdivision": 4,
-        "collection": "JUAN SERRANO",
+        "pdfUrl": "/pdfs/6301.0.pdf",
+        "subdivision": 6,
+        "collection": "JUAN LORENZO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6302",
+        "id": "6302.0",
         "title": "TRACK 19- DOS DEDOS COMB1 - COMB2",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2833,14 +2852,14 @@
             "VOLUMEN",
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/6302.pdf",
+        "pdfUrl": "/pdfs/6302.0.pdf",
         "subdivision": 4,
-        "collection": "JUAN SERRANO",
+        "collection": "JUAN LORENZO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6303",
+        "id": "6303.0",
         "title": "TRACK20- TRES DEDOS - COMB1 - COMB2",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2852,14 +2871,14 @@
             "PRECISIÓN",
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/6303.pdf",
+        "pdfUrl": "/pdfs/6303.0.pdf",
         "subdivision": 4,
-        "collection": "JUAN SERRANO",
+        "collection": "JUAN LORENZO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6304",
+        "id": "6304.0",
         "title": "TRACK21- COMBA SUBIENDO DEDOS",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2871,14 +2890,14 @@
             "DEDO CAMBIADO",
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/6304.pdf",
-        "subdivision": 4,
-        "collection": "JUAN SERRANO",
+        "pdfUrl": "/pdfs/6304.0.pdf",
+        "subdivision": 6,
+        "collection": "JUAN LORENZO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6305",
+        "id": "6305.0",
         "title": "TRACK27- REPITIENDO PULGAR ÍNDICE",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2890,14 +2909,14 @@
             "VOLUMEN",
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/6305.pdf",
+        "pdfUrl": "/pdfs/6305.0.pdf",
         "subdivision": 4,
-        "collection": "JUAN SERRANO",
+        "collection": "JUAN LORENZO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6306",
+        "id": "6306.0",
         "title": "TRACK28- ALTERNANDO PULGAR ARPEGIO",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2909,18 +2928,18 @@
             "VELOCIDAD",
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/6306.pdf",
+        "pdfUrl": "/pdfs/6306.0.pdf",
         "subdivision": 4,
-        "collection": "JUAN SERRANO",
+        "collection": "JUAN LORENZO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6307",
+        "id": "6307.0",
         "title": "TRACK29- APERTURAS I-M Y M-A",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
-        "secondaryTechnique": "",
+        "secondaryTechnique": "APERTURAS",
         "level": "1",
         "duration": "00:05:00",
         "description": "",
@@ -2928,14 +2947,14 @@
             "PRECISIÓN",
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/6307.pdf",
-        "subdivision": 2,
-        "collection": "JUAN SERRANO",
+        "pdfUrl": "/pdfs/6307.0.pdf",
+        "subdivision": 6,
+        "collection": "JUAN LORENZO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6401",
+        "id": "6401.0",
         "title": "COMBINACION1 IMIA",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2947,14 +2966,14 @@
             "FUERZA",
             "DEDO CAMBIADO"
         ],
-        "pdfUrl": "/pdfs/6401.pdf",
+        "pdfUrl": "/pdfs/6401.0.pdf",
         "subdivision": 2,
-        "collection": "OSCAR HERRERO",
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6402",
+        "id": "6402.0",
         "title": "COMBINACION2 MAMI",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2966,14 +2985,14 @@
             "FUERZA",
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/6402.pdf",
+        "pdfUrl": "/pdfs/6402.0.pdf",
         "subdivision": 2,
-        "collection": "OSCAR HERRERO",
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6403",
+        "id": "6403.0",
         "title": "COMBINACION3 IAIM",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -2985,14 +3004,14 @@
             "VOLUMEN",
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/6403.pdf",
+        "pdfUrl": "/pdfs/6403.0.pdf",
         "subdivision": 2,
-        "collection": "OSCAR HERRERO",
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6404",
+        "id": "6404.0",
         "title": "COMBINACIONES COMBINADAS",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -3004,14 +3023,14 @@
             "FUERZA",
             "VELOCIDAD"
         ],
-        "pdfUrl": "/pdfs/6404.pdf",
+        "pdfUrl": "/pdfs/6404.0.pdf",
         "subdivision": 2,
-        "collection": "OSCAR HERRERO",
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6405",
+        "id": "6405.0",
         "title": "ARPEGIO COMB1+IMIAMI",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -3023,14 +3042,14 @@
             "FUERZA",
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/6405.pdf",
+        "pdfUrl": "/pdfs/6405.0.pdf",
         "subdivision": 2,
-        "collection": "OSCAR HERRERO",
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6406",
+        "id": "6406.0",
         "title": "ARPEGIO IMA",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -3042,14 +3061,14 @@
             "VOLUMEN",
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/6406.pdf",
-        "subdivision": 2,
-        "collection": "OSCAR HERRERO",
+        "pdfUrl": "/pdfs/6406.0.pdf",
+        "subdivision": 6,
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6407",
+        "id": "6407.0",
         "title": "ARPEGIO IMA CON LIGADO",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -3061,14 +3080,14 @@
             "PRECISIÓN",
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/6407.pdf",
-        "subdivision": 2,
-        "collection": "OSCAR HERRERO",
+        "pdfUrl": "/pdfs/6407.0.pdf",
+        "subdivision": 4,
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6501",
+        "id": "6601.0",
         "title": "COMPUESTO TIO PEPE",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -3080,14 +3099,14 @@
             "DEDO CAMBIADO",
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/6501.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/6601.0.pdf",
+        "subdivision": 4,
         "collection": "MIGUEL ANGEL CORTÉS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6502",
+        "id": "6602.0",
         "title": "ARPEGIO MOTIVO SOLEA",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -3099,14 +3118,14 @@
             "VOLUMEN",
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/6502.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/6602.0.pdf",
+        "subdivision": 4,
         "collection": "MIGUEL ANGEL CORTÉS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6503",
+        "id": "",
         "title": "ARPEGGIO REPITIENDO AGUDO",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -3118,14 +3137,14 @@
             "VOLUMEN",
             "RITMO"
         ],
-        "pdfUrl": "/pdfs/6503.pdf",
-        "subdivision": 4,
-        "collection": "MIGUEL ANGEL CORTÉS",
+        "pdfUrl": "/pdfs/nan.pdf",
+        "subdivision": 1,
+        "collection": "OTROS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6504",
+        "id": "",
         "title": "ARPEGIO CON PICADO ASCENDENTE Y REPITIENDO AGUDO",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -3137,14 +3156,14 @@
             "VELOCIDAD",
             "RITMO"
         ],
-        "pdfUrl": "/pdfs/6504.pdf",
-        "subdivision": 4,
-        "collection": "MIGUEL ANGEL CORTÉS",
+        "pdfUrl": "/pdfs/nan.pdf",
+        "subdivision": 1,
+        "collection": "OTROS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6601",
+        "id": "6801.0",
         "title": "ARPEGIO SIMPLE \"AGUA\"",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -3156,14 +3175,14 @@
             "PRECISIÓN",
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/6601.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/6801.0.pdf",
+        "subdivision": 3,
         "collection": "NIÑO DE PURA",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "6602",
+        "id": "6802.0",
         "title": "ARPEGIO DOBLE VARIANDO BORDONES",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -3175,14 +3194,14 @@
             "FUERZA",
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/6602.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/6802.0.pdf",
+        "subdivision": 6,
         "collection": "NIÑO DE PURA",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "7101",
+        "id": "7101.0",
         "title": "ENTRI TREMOLO 1 G1",
         "repetitions": "1",
         "mainTechnique": "TREMOLO",
@@ -3194,14 +3213,14 @@
             "FUERZA",
             "DEDO CAMBIADO"
         ],
-        "pdfUrl": "/pdfs/7101.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/7101.0.pdf",
+        "subdivision": 5,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "7102",
+        "id": "7102.0",
         "title": "ENTRI TREMOLO 2 G2",
         "repetitions": "1",
         "mainTechnique": "TREMOLO",
@@ -3213,14 +3232,14 @@
             "VOLUMEN",
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/7102.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/7102.0.pdf",
+        "subdivision": 5,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "7201",
+        "id": "7201.0",
         "title": "TREMOLO NANA A",
         "repetitions": "1",
         "mainTechnique": "TREMOLO",
@@ -3232,14 +3251,14 @@
             "FUERZA",
             "VELOCIDAD"
         ],
-        "pdfUrl": "/pdfs/7201.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/7201.0.pdf",
+        "subdivision": 5,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "7202",
+        "id": "7202.0",
         "title": "TREMOLO EN C",
         "repetitions": "1",
         "mainTechnique": "TREMOLO",
@@ -3251,14 +3270,14 @@
             "RITMO",
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/7202.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/7202.0.pdf",
+        "subdivision": 5,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "7203",
+        "id": "7203.0",
         "title": "TREMOLO MARIO ESCUDERO",
         "repetitions": "1",
         "mainTechnique": "TREMOLO",
@@ -3270,14 +3289,14 @@
             "RITMO",
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/7203.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/7203.0.pdf",
+        "subdivision": 5,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "7301",
+        "id": "7301.0",
         "title": "TREMOLO AL AIRE MOVIENDO PULGAR",
         "repetitions": "1",
         "mainTechnique": "TREMOLO",
@@ -3288,14 +3307,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/7301.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/7301.0.pdf",
+        "subdivision": 5,
         "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "7302",
+        "id": "7302.0",
         "title": "TREMOLO AL AIRE MOVIENDO DEDOS",
         "repetitions": "1",
         "mainTechnique": "TREMOLO",
@@ -3306,14 +3325,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/7302.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/7302.0.pdf",
+        "subdivision": 5,
         "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "7303",
+        "id": "7303.0",
         "title": "TREMOLO CON ESCALA CROMÁTICA",
         "repetitions": "1",
         "mainTechnique": "TREMOLO",
@@ -3324,14 +3343,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/7303.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/7303.0.pdf",
+        "subdivision": 5,
         "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "7304",
+        "id": "7304.0",
         "title": "TREMOLO POR SOLEA",
         "repetitions": "1",
         "mainTechnique": "TREMOLO",
@@ -3342,14 +3361,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/7304.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/7304.0.pdf",
+        "subdivision": 5,
         "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "7401",
+        "id": "7401.0",
         "title": "EJERCICIO TREMOLO OCTAVAS",
         "repetitions": "1",
         "mainTechnique": "TREMOLO",
@@ -3360,14 +3379,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/7401.pdf",
-        "subdivision": 3,
-        "collection": "OTROS",
+        "pdfUrl": "/pdfs/7401.0.pdf",
+        "subdivision": 5,
+        "collection": "MIGUEL ANGEL CORTÉS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "7402",
+        "id": "7402.0",
         "title": "EJERCICIO TREMOLO GRANAINA",
         "repetitions": "1",
         "mainTechnique": "TREMOLO",
@@ -3378,14 +3397,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/7402.pdf",
-        "subdivision": 2,
-        "collection": "OTROS",
+        "pdfUrl": "/pdfs/7402.0.pdf",
+        "subdivision": 5,
+        "collection": "MIGUEL ANGEL CORTÉS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "7501",
+        "id": "7501.0",
         "title": "TREMOLO TRES DEDOS",
         "repetitions": "1",
         "mainTechnique": "TREMOLO",
@@ -3396,14 +3415,14 @@
         "objectives": [
             "DEDO CAMBIADO"
         ],
-        "pdfUrl": "/pdfs/7501.pdf",
-        "subdivision": 2,
-        "collection": "NIÑO DE PURA",
+        "pdfUrl": "/pdfs/7501.0.pdf",
+        "subdivision": 4,
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "7502",
+        "id": "7502.0",
         "title": "TREMOLO TRES DEDOS IM",
         "repetitions": "1",
         "mainTechnique": "TREMOLO",
@@ -3414,14 +3433,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/7502.pdf",
-        "subdivision": 2,
-        "collection": "NIÑO DE PURA",
+        "pdfUrl": "/pdfs/7502.0.pdf",
+        "subdivision": 4,
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "7503",
+        "id": "7503.0",
         "title": "TREMOLO TRES DEDOS MA",
         "repetitions": "1",
         "mainTechnique": "TREMOLO",
@@ -3432,14 +3451,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/7503.pdf",
-        "subdivision": 6,
-        "collection": "NIÑO DE PURA",
+        "pdfUrl": "/pdfs/7503.0.pdf",
+        "subdivision": 4,
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "7504",
+        "id": "7504.0",
         "title": "TREMOLO TRES DEDOS IA",
         "repetitions": "1",
         "mainTechnique": "TREMOLO",
@@ -3450,14 +3469,14 @@
         "objectives": [
             "VELOCIDAD"
         ],
-        "pdfUrl": "/pdfs/7504.pdf",
-        "subdivision": 6,
-        "collection": "NIÑO DE PURA",
+        "pdfUrl": "/pdfs/7504.0.pdf",
+        "subdivision": 4,
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "7505",
+        "id": "7505.0",
         "title": "TREMOLO CONTÍNUO",
         "repetitions": "1",
         "mainTechnique": "TREMOLO",
@@ -3468,14 +3487,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/7505.pdf",
-        "subdivision": 6,
-        "collection": "NIÑO DE PURA",
+        "pdfUrl": "/pdfs/7505.0.pdf",
+        "subdivision": 5,
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "7506",
+        "id": "7506.0",
         "title": "TREMOLO COMPOSICIÓN",
         "repetitions": "1",
         "mainTechnique": "TREMOLO",
@@ -3486,14 +3505,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/7506.pdf",
-        "subdivision": 6,
-        "collection": "NIÑO DE PURA",
+        "pdfUrl": "/pdfs/7506.0.pdf",
+        "subdivision": 5,
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "7601",
+        "id": "7601.0",
         "title": "TREMOLO FARRUCA",
         "repetitions": "1",
         "mainTechnique": "TREMOLO",
@@ -3504,32 +3523,32 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/7601.pdf",
+        "pdfUrl": "/pdfs/7601.0.pdf",
         "subdivision": 5,
-        "collection": "OTROS",
+        "collection": "PEDRO SIERRA",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "7701",
+        "id": "7701.0",
         "title": "EJERCICIO TREMOLO Y APERTURAS",
         "repetitions": "1",
         "mainTechnique": "TREMOLO",
-        "secondaryTechnique": "",
+        "secondaryTechnique": "APERTURAS",
         "level": "2",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/7701.pdf",
+        "pdfUrl": "/pdfs/7701.0.pdf",
         "subdivision": 5,
-        "collection": "OTROS",
+        "collection": "NIÑO DE PURA",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "8101",
+        "id": "8101.0",
         "title": "APERTURA REPENTE 1",
         "repetitions": "1",
         "mainTechnique": "APERTURAS",
@@ -3541,14 +3560,14 @@
             "FUERZA",
             "REPENTES"
         ],
-        "pdfUrl": "/pdfs/8101.pdf",
-        "subdivision": 5,
+        "pdfUrl": "/pdfs/8101.0.pdf",
+        "subdivision": 1,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "8102",
+        "id": "8102.0",
         "title": "APERTURA REPENTE 2",
         "repetitions": "1",
         "mainTechnique": "APERTURAS",
@@ -3560,14 +3579,14 @@
             "RITMO",
             "REPENTES"
         ],
-        "pdfUrl": "/pdfs/8102.pdf",
-        "subdivision": 7,
+        "pdfUrl": "/pdfs/8102.0.pdf",
+        "subdivision": 1,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "8103",
+        "id": "8103.0",
         "title": "APERTURA REPENTE 3",
         "repetitions": "1",
         "mainTechnique": "APERTURAS",
@@ -3578,14 +3597,14 @@
         "objectives": [
             "RITMO"
         ],
-        "pdfUrl": "/pdfs/8103.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/8103.0.pdf",
+        "subdivision": 1,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "8104",
+        "id": "8104.0",
         "title": "APERTURA JESUS DEL ROSARIO",
         "repetitions": "1",
         "mainTechnique": "APERTURAS",
@@ -3596,14 +3615,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/8104.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/8104.0.pdf",
+        "subdivision": 1,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "8105",
+        "id": "8105.0",
         "title": "ARPEGIO CON APERTURA MEÑIQUE",
         "repetitions": "1",
         "mainTechnique": "APERTURAS",
@@ -3614,14 +3633,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/8105.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/8105.0.pdf",
+        "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "8106",
+        "id": "8106.0",
         "title": "INTERVALOS SOBRINO ENTRI",
         "repetitions": "1",
         "mainTechnique": "APERTURAS",
@@ -3632,14 +3651,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/8106.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/8106.0.pdf",
+        "subdivision": 1,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "8107",
+        "id": "8107.0",
         "title": "FUERZA SOBRINO ENTRI",
         "repetitions": "1",
         "mainTechnique": "APERTURAS",
@@ -3650,14 +3669,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/8107.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/8107.0.pdf",
+        "subdivision": 1,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "8201",
+        "id": "8201.0",
         "title": "ARPEGIO APERTURAS LARGAS",
         "repetitions": "1",
         "mainTechnique": "APERTURAS",
@@ -3668,68 +3687,68 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/8201.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/8201.0.pdf",
+        "subdivision": 3,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "8202",
+        "id": "8202.0",
         "title": "PRIMER PICADO C APERTURA",
         "repetitions": "1",
         "mainTechnique": "APERTURAS",
-        "secondaryTechnique": "",
+        "secondaryTechnique": "PICADO",
         "level": "2",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/8202.pdf",
+        "pdfUrl": "/pdfs/8202.0.pdf",
         "subdivision": 4,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "8203",
+        "id": "8203.0",
         "title": "SEGUNDO PICADO C APERTURA",
         "repetitions": "1",
         "mainTechnique": "APERTURAS",
-        "secondaryTechnique": "",
+        "secondaryTechnique": "PICADO",
         "level": "2",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "DEDO CAMBIADO"
         ],
-        "pdfUrl": "/pdfs/8203.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/8203.0.pdf",
+        "subdivision": 4,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "8204",
+        "id": "8204.0",
         "title": "APERTURAS COLOMBIANAS",
         "repetitions": "1",
         "mainTechnique": "APERTURAS",
-        "secondaryTechnique": "",
+        "secondaryTechnique": "ARPEGIO",
         "level": "1",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/8204.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/8204.0.pdf",
+        "subdivision": 2,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "8205",
+        "id": "8205.0",
         "title": "APERTURAS LOCAS IZQUIERDA",
         "repetitions": "1",
         "mainTechnique": "APERTURAS",
@@ -3740,14 +3759,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/8205.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/8205.0.pdf",
+        "subdivision": 2,
         "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "8301",
+        "id": "8301.0",
         "title": "APERTURAS ARPEGIO BULERÍAS",
         "repetitions": "1",
         "mainTechnique": "APERTURAS",
@@ -3758,14 +3777,14 @@
         "objectives": [
             "VELOCIDAD"
         ],
-        "pdfUrl": "/pdfs/8301.pdf",
-        "subdivision": 3,
-        "collection": "",
+        "pdfUrl": "/pdfs/8301.0.pdf",
+        "subdivision": 2,
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "8302",
+        "id": "8302.0",
         "title": "APERTURAS REPITIENDO AGUDO BULERÍAS",
         "repetitions": "1",
         "mainTechnique": "APERTURAS",
@@ -3776,14 +3795,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/8302.pdf",
-        "subdivision": 3,
-        "collection": "NIÑO DE PURA",
+        "pdfUrl": "/pdfs/8302.0.pdf",
+        "subdivision": 4,
+        "collection": "GERARDO NUÑEZ",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "8401",
+        "id": "8401.0",
         "title": "APERTURA TODOS LOS DEDOS BAJANDO MASTIL",
         "repetitions": "1",
         "mainTechnique": "APERTURAS",
@@ -3794,14 +3813,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/8401.pdf",
-        "subdivision": 3,
-        "collection": "OTROS",
+        "pdfUrl": "/pdfs/8401.0.pdf",
+        "subdivision": 1,
+        "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "8402",
+        "id": "8402.0",
         "title": "APERTURA 2/3 BAJANDO EL MASTIL",
         "repetitions": "1",
         "mainTechnique": "APERTURAS",
@@ -3812,14 +3831,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/8402.pdf",
-        "subdivision": 3,
-        "collection": "OTROS",
+        "pdfUrl": "/pdfs/8402.0.pdf",
+        "subdivision": 2,
+        "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "8403",
+        "id": "8403.0",
         "title": "EXTENSIÓN TRANSVERSAL",
         "repetitions": "1",
         "mainTechnique": "APERTURAS",
@@ -3830,14 +3849,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/8403.pdf",
+        "pdfUrl": "/pdfs/8403.0.pdf",
         "subdivision": 3,
-        "collection": "OTROS",
+        "collection": "OSCAR HERRERO",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9101",
+        "id": "9101.0",
         "title": "RAS.1 RUT. VARIADA INDEPENDENCIA DE DEDOS G1",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -3848,14 +3867,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/9101.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/9101.0.pdf",
+        "subdivision": 1,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9102",
+        "id": "9102.0",
         "title": "RAS.2 RUT. VARIADA INDEPENDENCIA DE DEDOS G1 (VOLUMEN)",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -3866,14 +3885,14 @@
         "objectives": [
             "RITMO"
         ],
-        "pdfUrl": "/pdfs/9102.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/9102.0.pdf",
+        "subdivision": 1,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9103",
+        "id": "9103.0",
         "title": "RAS.3 RUT. VARIADA CINQUILLOS DEDO FIJO PARANDO G3",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -3884,14 +3903,14 @@
         "objectives": [
             "RITMO"
         ],
-        "pdfUrl": "/pdfs/9103.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/9103.0.pdf",
+        "subdivision": 5,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9104",
+        "id": "9104.0",
         "title": "RAS.4 RUT. VARIADA CINQUILLOS DEDO FIJO SIN PARAR G2",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -3902,14 +3921,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/9104.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/9104.0.pdf",
+        "subdivision": 5,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9105",
+        "id": "9105.0",
         "title": "RAS.5 RUT. VARIADA ABANICO DE DOS PARANDO G1",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -3920,14 +3939,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/9105.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/9105.0.pdf",
+        "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9106",
+        "id": "9106.0",
         "title": "RAS.6 RUT. VARIADA ABANICO DE DOS SIN PARAR G2",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -3938,14 +3957,14 @@
         "objectives": [
             "DEDO CAMBIADO"
         ],
-        "pdfUrl": "/pdfs/9106.pdf",
-        "subdivision": 3,
+        "pdfUrl": "/pdfs/9106.0.pdf",
+        "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9107",
+        "id": "9107.0",
         "title": "RAS.7 RUT. VARIADA ABANICO SEISILLOS PARANDO G3",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -3956,14 +3975,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/9107.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/9107.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9108",
+        "id": "9108.0",
         "title": "RAS.8 RUT. VARIADA ABANICO SEISILLOS SIN PARAR G1",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -3974,14 +3993,14 @@
         "objectives": [
             "VELOCIDAD"
         ],
-        "pdfUrl": "/pdfs/9108.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/9108.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9109",
+        "id": "9109.0",
         "title": "RAS.9 RUT. VARIADA CORCHEAS DEDO FIJO PARANDO G2",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -3992,14 +4011,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/9109.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/9109.0.pdf",
+        "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9110",
+        "id": "9110.0",
         "title": "RAS.10 RUT. VARIADA CORCHEAS DEDO FIJO SIN PARAR G3",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4010,14 +4029,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/9110.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/9110.0.pdf",
+        "subdivision": 4,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9111",
+        "id": "9111.0",
         "title": "RAS.11 RUT. VARIADA TRESILLOS DEDO FIJO PARANDO G1",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4028,14 +4047,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/9111.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/9111.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9112",
+        "id": "9112.0",
         "title": "RAS.12 RUT. VARIADA TRESILLOS DEDO FIJO SIN PARAR G2",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4046,14 +4065,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/9112.pdf",
-        "subdivision": 2,
+        "pdfUrl": "/pdfs/9112.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9113",
+        "id": "9113.0",
         "title": "RAS.13 RUT. ESCOBILLA PRIMER RASGUEO",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4064,14 +4083,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/9113.pdf",
+        "pdfUrl": "/pdfs/9113.0.pdf",
         "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9114",
+        "id": "9114.0",
         "title": "RAS.14 RUT. ESCOBILLA SEGUNDO RASGUEO",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4082,14 +4101,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/9114.pdf",
-        "subdivision": 5,
+        "pdfUrl": "/pdfs/9114.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9115",
+        "id": "9115.0",
         "title": "RAS.15 RUT. ESCOBILLA TERCER RASGUEO",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4100,14 +4119,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/9115.pdf",
-        "subdivision": 5,
+        "pdfUrl": "/pdfs/9115.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9116",
+        "id": "9116.0",
         "title": "RAS.16 RUT. ESCOBILLA CUARTO RASGUEO",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4118,14 +4137,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/9116.pdf",
-        "subdivision": 5,
+        "pdfUrl": "/pdfs/9116.0.pdf",
+        "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9117",
+        "id": "9117.0",
         "title": "RAS.17 RUT. ESCOBILLA QUINTO RASGUEO",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4136,14 +4155,14 @@
         "objectives": [
             "DEDO CAMBIADO"
         ],
-        "pdfUrl": "/pdfs/9117.pdf",
-        "subdivision": 5,
+        "pdfUrl": "/pdfs/9117.0.pdf",
+        "subdivision": 2,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9118",
+        "id": "9118.0",
         "title": "RAS.18 RUT. ESCOBILLA SEXTO RASGUEO",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4154,14 +4173,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/9118.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/9118.0.pdf",
+        "subdivision": 3,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9119",
+        "id": "9119.0",
         "title": "RAS.19 RUT. REPENTES (X3) ABANICO CUATRO UN DOS TRES",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4172,14 +4191,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/9119.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/9119.0.pdf",
+        "subdivision": 1,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9120",
+        "id": "9120.0",
         "title": "RAS.20 RUT. REPENTES (X3) DEDO FIJO CINQUILLOS UN DOS TRES",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4190,14 +4209,14 @@
         "objectives": [
             "VELOCIDAD"
         ],
-        "pdfUrl": "/pdfs/9120.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/9120.0.pdf",
+        "subdivision": 1,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9121",
+        "id": "9121.0",
         "title": "RAS.21 RUT. REPENTES (X3) ABANICO ALEGÍAS UN DOS TRES",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4208,14 +4227,14 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/9121.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/9121.0.pdf",
+        "subdivision": 1,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9122",
+        "id": "9122.0",
         "title": "RAS.22 RUT. HORQUILLA UN DEDO POR VEZ",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4226,14 +4245,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/9122.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/9122.0.pdf",
+        "subdivision": 1,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9123",
+        "id": "9123.0",
         "title": "RAS.23 RUT. HORQUILLA G1X1 G2X2 G3X3 SIN PARAR",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4244,14 +4263,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/9123.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/9123.0.pdf",
+        "subdivision": 5,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9124",
+        "id": "9124.0",
         "title": "RAS.24 RUT. HORQUILLA G2 CUATRO DEDOS +  InMe",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4262,14 +4281,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/9124.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/9124.0.pdf",
+        "subdivision": 6,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9125",
+        "id": "9125.0",
         "title": "RAS.25 RUT. HORQUILLA G3 CUATRO DEDOS + DOS InMe",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4280,14 +4299,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/9125.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/9125.0.pdf",
+        "subdivision": 6,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9126",
+        "id": "9126.0",
         "title": "RAS.26 RUT. HORQUILLA G1 TRESILLOS (IM-IA-IO-MA-MO-AM)",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4298,14 +4317,14 @@
         "objectives": [
             "RITMO"
         ],
-        "pdfUrl": "/pdfs/9126.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/9126.0.pdf",
+        "subdivision": 6,
         "collection": "ENTRI",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9201",
+        "id": "9201.0",
         "title": "MALAGUEÑA HORQUILLA SIMPLE Y DOBLE",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4316,14 +4335,14 @@
         "objectives": [
             "RITMO"
         ],
-        "pdfUrl": "/pdfs/9201.pdf",
-        "subdivision": 4,
-        "collection": "OSCAR HERRERO",
+        "pdfUrl": "/pdfs/9201.0.pdf",
+        "subdivision": 2,
+        "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9202",
+        "id": "9202.0",
         "title": "CANTIÑAS ABANICO",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4334,14 +4353,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/9202.pdf",
-        "subdivision": 4,
-        "collection": "OSCAR HERRERO",
+        "pdfUrl": "/pdfs/9202.0.pdf",
+        "subdivision": 6,
+        "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9203",
+        "id": "9203.0",
         "title": "HORQUILLA EN MENORES",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4352,14 +4371,14 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/9203.pdf",
-        "subdivision": 4,
-        "collection": "OSCAR HERRERO",
+        "pdfUrl": "/pdfs/9203.0.pdf",
+        "subdivision": 5,
+        "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9204",
+        "id": "9204.0",
         "title": "HORQUILLA CUATRO EN A",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4370,14 +4389,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/9204.pdf",
-        "subdivision": 4,
-        "collection": "OSCAR HERRERO",
+        "pdfUrl": "/pdfs/9204.0.pdf",
+        "subdivision": 3,
+        "collection": "JAVIER CONDE",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9301",
+        "id": "9301.0",
         "title": "RASGUEO POR ALEGRÍAS G3 MODIFICADO",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4388,14 +4407,14 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/9301.pdf",
-        "subdivision": 4,
-        "collection": "NIÑO DE PURA",
+        "pdfUrl": "/pdfs/9301.0.pdf",
+        "subdivision": 5,
+        "collection": "PEDRO SIERRA",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "9401",
+        "id": "9401.0",
         "title": "RASGUEO VARIADO Lam",
         "repetitions": "1",
         "mainTechnique": "RASGUEOS",
@@ -4406,17 +4425,17 @@
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/9401.pdf",
-        "subdivision": 4,
+        "pdfUrl": "/pdfs/9401.0.pdf",
+        "subdivision": 5,
         "collection": "NIÑO DE PURA",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "11",
+        "id": "11.0",
         "title": "ETUDE L",
         "repetitions": "1",
-        "mainTechnique": "ESTUDIOS",
+        "mainTechnique": "LIGADO",
         "secondaryTechnique": "LIGADO",
         "level": "4",
         "duration": "00:05:00",
@@ -4424,17 +4443,17 @@
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/11.pdf",
-        "subdivision": 4,
-        "collection": "OTROS",
+        "pdfUrl": "/pdfs/11.0.pdf",
+        "subdivision": 1,
+        "collection": "ESTUDIOS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "12",
+        "id": "12.0",
         "title": "EL VUELO",
         "repetitions": "1",
-        "mainTechnique": "ESTUDIOS",
+        "mainTechnique": "PICADOS",
         "secondaryTechnique": "PICADO",
         "level": "4",
         "duration": "00:05:00",
@@ -4442,53 +4461,53 @@
         "objectives": [
             "DEDO CAMBIADO"
         ],
-        "pdfUrl": "/pdfs/12.pdf",
-        "subdivision": 4,
-        "collection": "OTROS",
+        "pdfUrl": "/pdfs/12.0.pdf",
+        "subdivision": 1,
+        "collection": "ESTUDIOS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "13",
+        "id": "13.0",
         "title": "VILLALOBOS Nº5",
         "repetitions": "1",
-        "mainTechnique": "ESTUDIOS",
-        "secondaryTechnique": "ARPEGIO",
+        "mainTechnique": "ARPEGIO",
+        "secondaryTechnique": "",
         "level": "5",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/13.pdf",
-        "subdivision": 4,
-        "collection": "OTROS",
+        "pdfUrl": "/pdfs/13.0.pdf",
+        "subdivision": 1,
+        "collection": "ESTUDIOS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "14",
-        "title": "TREMOLO MARIO ESCUDERO",
+        "id": "14.0",
+        "title": "NANA MARIO ESCUDERO",
         "repetitions": "1",
-        "mainTechnique": "ESTUDIOS",
-        "secondaryTechnique": "TREMOLO",
+        "mainTechnique": "TREMOLO",
+        "secondaryTechnique": "",
         "level": "4",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/14.pdf",
-        "subdivision": 4,
-        "collection": "OTROS",
+        "pdfUrl": "/pdfs/14.0.pdf",
+        "subdivision": 1,
+        "collection": "ESTUDIOS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "15",
+        "id": "15.0",
         "title": "SOLEA ENTRI",
         "repetitions": "1",
-        "mainTechnique": "ESTUDIOS",
+        "mainTechnique": "ARPEGIO CON PICADO",
         "secondaryTechnique": "",
         "level": "1",
         "duration": "00:05:00",
@@ -4496,35 +4515,35 @@
         "objectives": [
             "VELOCIDAD"
         ],
-        "pdfUrl": "/pdfs/15.pdf",
-        "subdivision": 4,
-        "collection": "ENTRI",
+        "pdfUrl": "/pdfs/15.0.pdf",
+        "subdivision": 1,
+        "collection": "ESTUDIOS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "16",
+        "id": "16.0",
         "title": "ALEGRÍAS ENTRI",
         "repetitions": "1",
-        "mainTechnique": "ESTUDIOS",
-        "secondaryTechnique": "",
+        "mainTechnique": "ARPEGIO CON PICADO",
+        "secondaryTechnique": "PICADO",
         "level": "3",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "PRECISIÓN"
         ],
-        "pdfUrl": "/pdfs/16.pdf",
-        "subdivision": 4,
-        "collection": "ENTRI",
+        "pdfUrl": "/pdfs/16.0.pdf",
+        "subdivision": 1,
+        "collection": "ESTUDIOS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "17",
+        "id": "17.0",
         "title": "ÍMPETU",
         "repetitions": "1",
-        "mainTechnique": "ESTUDIOS",
+        "mainTechnique": "ARPEGIO",
         "secondaryTechnique": "APERTURAS",
         "level": "2",
         "duration": "00:05:00",
@@ -4532,63 +4551,63 @@
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/17.pdf",
-        "subdivision": 4,
-        "collection": "OTROS",
+        "pdfUrl": "/pdfs/17.0.pdf",
+        "subdivision": 1,
+        "collection": "ESTUDIOS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "18",
+        "id": "18.0",
         "title": "PERCUSIÓN FLAMENCA",
         "repetitions": "1",
-        "mainTechnique": "ESTUDIOS",
-        "secondaryTechnique": "",
+        "mainTechnique": "ARPEGIO",
+        "secondaryTechnique": "PICADO",
         "level": "1",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/18.pdf",
-        "subdivision": 4,
-        "collection": "OTROS",
+        "pdfUrl": "/pdfs/18.0.pdf",
+        "subdivision": 1,
+        "collection": "ESTUDIOS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "19",
+        "id": "19.0",
         "title": "PANADEROS",
         "repetitions": "1",
-        "mainTechnique": "ESTUDIOS",
-        "secondaryTechnique": "PICADO",
+        "mainTechnique": "PICADOS",
+        "secondaryTechnique": "PICADOS",
         "level": "1",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "VOLUMEN"
         ],
-        "pdfUrl": "/pdfs/19.pdf",
-        "subdivision": 6,
-        "collection": "OTROS",
+        "pdfUrl": "/pdfs/19.0.pdf",
+        "subdivision": 1,
+        "collection": "ESTUDIOS",
         "videoId": "",
         "recommendedBpm": 80
     },
     {
-        "id": "20",
+        "id": "20.0",
         "title": "SEVILLANAS ENTRI",
         "repetitions": "1",
-        "mainTechnique": "ESTUDIOS",
-        "secondaryTechnique": "",
+        "mainTechnique": "ARPEGIO CON PICADO",
+        "secondaryTechnique": "PULGAR",
         "level": "5",
         "duration": "00:05:00",
         "description": "",
         "objectives": [
             "FUERZA"
         ],
-        "pdfUrl": "/pdfs/20.pdf",
-        "subdivision": 6,
-        "collection": "ENTRI",
+        "pdfUrl": "/pdfs/20.0.pdf",
+        "subdivision": 1,
+        "collection": "ESTUDIOS",
         "videoId": "",
         "recommendedBpm": 80
     }
