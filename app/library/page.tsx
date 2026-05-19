@@ -167,7 +167,7 @@ export default function LibraryPage() {
             <button
               key={ex.id}
               onClick={() => setSelectedExercise(ex)}
-              className={`w-full text-left p-3.5 rounded-2xl border transition-all flex items-start justify-between gap-3 group relative overflow-hidden ${
+              className={`w-full shrink-0 text-left p-3.5 rounded-2xl border transition-all flex items-start justify-between gap-3 group relative overflow-hidden ${
                 selectedExercise?.id === ex.id
                   ? 'bg-sky-500/10 border-sky-500/40 shadow-lg shadow-sky-500/5'
                   : 'bg-slate-850/40 border-slate-800/60 hover:bg-slate-800/50 hover:border-slate-700/50'
@@ -230,7 +230,7 @@ export default function LibraryPage() {
                 </span>
               </div>
               <iframe
-                src={selectedExercise.pdfUrl}
+                src={`${selectedExercise.pdfUrl}#toolbar=0&navpanes=0&view=FitH`}
                 className="w-full h-full rounded-2xl border border-slate-800/60 bg-slate-900 shadow-2xl"
                 title={selectedExercise.title}
               />
