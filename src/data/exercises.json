@@ -3125,7 +3125,7 @@
         "recommendedBpm": 80
     },
     {
-        "id": "",
+        "id": "0000",
         "title": "ARPEGGIO REPITIENDO AGUDO",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
@@ -3144,7 +3144,7 @@
         "recommendedBpm": 80
     },
     {
-        "id": "",
+        "id": "0001",
         "title": "ARPEGIO CON PICADO ASCENDENTE Y REPITIENDO AGUDO",
         "repetitions": "1",
         "mainTechnique": "ARPEGIO",
