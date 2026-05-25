@@ -53,15 +53,15 @@ export default function Sidebar() {
           <ListVideo size={20} className="md:w-[22px] md:h-[22px]" />
         </Link>
         
-        <Link href="/library" className={linkClass("/library", "text-sky-500")} title="Biblioteca de Consulta">
-          <BookOpen size={20} className="md:w-[22px] md:h-[22px]" />
+        <Link href="/library" className={`${linkClass("/library", "text-sky-500")} hidden md:flex`} title="Biblioteca de Consulta">
+          <BookOpen size={22} />
         </Link>
 
         {isMaster && <div className="hidden md:block w-8 h-px bg-slate-800/60 my-2" />}
 
         {isMaster && (
-          <Link href="/plans" className={linkClass("/plans", "text-emerald-500")} title="La Forja Maestra">
-            <Hammer size={20} className="md:w-[22px] md:h-[22px]" />
+          <Link href="/plans" className={`${linkClass("/plans", "text-emerald-500")} hidden md:flex`} title="La Forja Maestra">
+            <Hammer size={22} />
           </Link>
         )}
       </div>

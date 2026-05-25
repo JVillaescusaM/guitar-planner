@@ -20,6 +20,13 @@ html, body {
   }
 }
 
+/* Sala de práctica: en móvil apaisado, usar toda la altura útil */
+@media (max-width: 767px) and (orientation: landscape) {
+  main:has(.practice-room) {
+    min-height: 100dvh;
+  }
+}
+
 /* Configuraciones de tema para v4 */
 @theme {
   --font-sans: var(--font-geist-sans);

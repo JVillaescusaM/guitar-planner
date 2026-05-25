@@ -109,13 +109,58 @@ export default function Home() {
   // Estados para los menús abatibles en móvil
   const [isLeftMenuOpen, setIsLeftMenuOpen] = useState(false);
   const [isRightMenuOpen, setIsRightMenuOpen] = useState(false);
+  const [isPortraitMobile, setIsPortraitMobile] = useState(false);
   const audioContext = useRef<AudioContext | null>(null);
 
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const tuningOscillator = useRef<OscillatorNode | null>(null);
 
+  useEffect(() => {
+    const updateOrientation = () => {
+      const mobile = window.matchMedia('(max-width: 767px)').matches;
+      const portrait = window.matchMedia('(orientation: portrait)').matches;
+      setIsPortraitMobile(mobile && portrait);
+    };
+    updateOrientation();
+    window.addEventListener('resize', updateOrientation);
+    window.addEventListener('orientationchange', updateOrientation);
+    return () => {
+      window.removeEventListener('resize', updateOrientation);
+      window.removeEventListener('orientationchange', updateOrientation);
+    };
+  }, []);
 
+  useEffect(() => {
+    if (!window.matchMedia('(max-width: 767px)').matches) return;
+
+    let locked = false;
+    const lockLandscape = async () => {
+      try {
+        const orientation = screen.orientation as ScreenOrientation & {
+          lock?: (orientation: string) => Promise<void>;
+        };
+        if (orientation.lock) {
+          await orientation.lock('landscape');
+          locked = true;
+        }
+      } catch {
+        // iOS/Safari suele bloquear lock sin gesto del usuario o fullscreen
+      }
+    };
+
+    lockLandscape();
+
+    return () => {
+      if (locked && screen.orientation?.unlock) {
+        try {
+          screen.orientation.unlock();
+        } catch {
+          /* ignore */
+        }
+      }
+    };
+  }, []);
 
   const [recordBpm, setRecordBpm] = useState<string>('');
 
@@ -789,9 +834,19 @@ useEffect(() => {
 
   return (
 
-    <div className="flex h-full w-full bg-slate-900 text-slate-200 overflow-hidden font-sans relative">
+    <div className="practice-room flex h-full w-full bg-slate-900 text-slate-200 overflow-hidden font-sans relative">
 
-      
+      {isPortraitMobile && (
+        <div className="fixed inset-0 z-[200] flex flex-col items-center justify-center bg-slate-950 p-8 text-center md:hidden">
+          <span className="text-5xl mb-4 animate-pulse">📱</span>
+          <h2 className="text-base font-black uppercase tracking-widest text-sky-400">
+            Gira el móvil en horizontal
+          </h2>
+          <p className="text-[10px] font-bold text-slate-500 uppercase tracking-wider mt-3 max-w-xs leading-relaxed">
+            La sala de práctica solo funciona en modo apaisado (landscape)
+          </p>
+        </div>
+      )}
 
       {/* 1. SIDEBAR IZQUIERDO */}
 

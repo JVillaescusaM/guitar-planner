@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'; // <-- Asegúrate de que está 'use
 import exercisesData from '../../src/data/exercises.json';
 import { useApp, Exercise } from '../../src/context/AppContext';
 import SessionInspector from '../../src/components/SessionInspector';
+import DesktopOnly from '../../src/components/DesktopOnly';
 // Extraemos las técnicas de forma limpia para los filtros del constructor
 const allTechniques = Array.from(
   new Set(exercisesData.map((ej) => ej.mainTechnique || 'OTROS'))
@@ -27,6 +28,7 @@ export default function PlansPage() {
   }
 
   return (
+    <DesktopOnly label="La Forja Maestra">
     <div className="flex flex-col h-full min-h-0 bg-slate-900 text-slate-200 overflow-hidden font-sans">
       
       {/* MENÚ SUPERIOR DE LA FORJA */}
@@ -66,6 +68,7 @@ export default function PlansPage() {
         {activeTab === 'manager' && <ContentManager />}
       </div>
     </div>
+    </DesktopOnly>
   );
 }
 

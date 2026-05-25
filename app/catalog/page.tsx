@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useApp, Exercise } from '../../src/context/AppContext';
 import SessionInspector from '../../src/components/SessionInspector';
+import { useIsMobile } from '../../src/hooks/useIsMobile';
 
 // Definimos una interfaz limpia para el estado del inspector para que admita ambos casos
 interface InspectingState {
@@ -13,10 +14,10 @@ interface InspectingState {
 
 export default function CatalogPage() {
   const { savedRoutines, presets, applyPresetToCalendar, forceRoutineToToday, user } = useApp();
+  const isMobile = useIsMobile();
   const [activeSubTab, setActiveSubTab] = useState<'routines' | 'plans'>('routines');
   const [selectedItemName, setSelectedItemName] = useState<string | null>(null);
 
-  // Estado del inspector
   const [inspectingSession, setInspectingSession] = useState<InspectingState | null>(null);
 
   // Filtramos los contenidos públicos firmados por el maestro
@@ -85,7 +86,7 @@ export default function CatalogPage() {
       )}
 
       {/* CONTENIDO PRINCIPAL */}
-      <div className="flex-1 flex flex-col lg:flex-row overflow-hidden p-4 md:p-6 gap-4 md:gap-6 min-h-0">
+      <div className={`flex-1 overflow-hidden p-4 md:p-6 min-h-0 ${isMobile ? '' : 'flex gap-6'}`}>
         
         <div className="flex-1 overflow-y-auto custom-scrollbar pr-1 min-h-0">
           
@@ -97,8 +98,8 @@ export default function CatalogPage() {
                 publicRoutines.map(routine => (
                   <div 
                     key={routine.id} 
-                    onClick={() => setInspectingSession({ name: routine.name, exercises: routine.exercises || [] })}
-                    className={`bg-slate-800 border rounded-2xl p-4 shadow-lg flex flex-col justify-between hover:border-purple-500/40 transition-all group cursor-pointer ${inspectingSession?.name === routine.name ? 'border-purple-500 shadow-purple-500/5' : 'border-slate-700/40'}`}
+                    onClick={isMobile ? undefined : () => setInspectingSession({ name: routine.name, exercises: routine.exercises || [] })}
+                    className={`bg-slate-800 border rounded-2xl p-4 shadow-lg flex flex-col justify-between hover:border-purple-500/40 transition-all group ${isMobile ? '' : 'cursor-pointer'} ${!isMobile && inspectingSession?.name === routine.name ? 'border-purple-500 shadow-purple-500/5' : 'border-slate-700/40'}`}
                   >
                     <div>
                       <span className="text-[7px] font-black text-purple-400 uppercase tracking-widest bg-purple-500/10 border border-purple-500/20 px-1.5 py-0.5 rounded">Rutina Única</span>
@@ -139,11 +140,11 @@ const structuredDays = preset.days ? preset.days.map((d) => {
                   return (
                     <div 
                       key={preset.id}
-                      onClick={() => setInspectingSession({ 
+                      onClick={isMobile ? undefined : () => setInspectingSession({ 
                         name: preset.name, 
                         daysData: structuredDays 
                       })}
-                      className={`bg-slate-800 border rounded-2xl p-4 shadow-lg flex flex-col justify-between hover:border-purple-500/40 transition-all group cursor-pointer ${inspectingSession?.name === preset.name ? 'border-purple-500 shadow-purple-500/5' : 'border-slate-700/40'}`}
+                      className={`bg-slate-800 border rounded-2xl p-4 shadow-lg flex flex-col justify-between hover:border-purple-500/40 transition-all group ${isMobile ? '' : 'cursor-pointer'} ${!isMobile && inspectingSession?.name === preset.name ? 'border-purple-500 shadow-purple-500/5' : 'border-slate-700/40'}`}
                     >
                       <div>
                         <div className="flex justify-between items-start">
@@ -167,23 +168,25 @@ const structuredDays = preset.days ? preset.days.map((d) => {
 
         </div>
 
-        <div className="w-full lg:w-80 shrink-0 overflow-y-auto custom-scrollbar max-h-[40vh] lg:max-h-none border-t lg:border-t-0 border-slate-800 pt-4 lg:pt-0">
-          {inspectingSession ? (
-            <SessionInspector 
-              name={inspectingSession.name}
-              exercises={inspectingSession.exercises}
-              daysData={inspectingSession.daysData}
-              showAction={false}
-            />
-          ) : (
-            <div className="bg-slate-800/40 border border-dashed border-slate-800 rounded-2xl p-6 h-80 flex flex-col items-center justify-center text-center">
-              <span className="text-xl mb-2 opacity-30">🔍</span>
-              <p className="text-[9px] font-black uppercase tracking-widest text-slate-500 leading-normal">
-                Haz clic en cualquier tarjeta<br />para inspeccionar sus ejercicios y técnicas
-              </p>
-            </div>
-          )}
-        </div>
+        {!isMobile && (
+          <div className="w-80 shrink-0 overflow-y-auto custom-scrollbar">
+            {inspectingSession ? (
+              <SessionInspector 
+                name={inspectingSession.name}
+                exercises={inspectingSession.exercises}
+                daysData={inspectingSession.daysData}
+                showAction={false}
+              />
+            ) : (
+              <div className="bg-slate-800/40 border border-dashed border-slate-800 rounded-2xl p-6 h-80 flex flex-col items-center justify-center text-center">
+                <span className="text-xl mb-2 opacity-30">🔍</span>
+                <p className="text-[9px] font-black uppercase tracking-widest text-slate-500 leading-normal">
+                  Haz clic en cualquier tarjeta<br />para inspeccionar sus ejercicios y técnicas
+                </p>
+              </div>
+            )}
+          </div>
+        )}
 
       </div>
     </div>
