@@ -330,6 +330,14 @@ function ContentManager() {
   const [presetDates, setPresetDates] = useState<Record<string, string>>({});
 
   useEffect(() => {
+    setRoutinesList(savedRoutines);
+  }, [savedRoutines]);
+
+  useEffect(() => {
+    setPresetsList(presets);
+  }, [presets]);
+
+  useEffect(() => {
     if (!selectedStudent) return;
 
     let unsubscribe = () => {};

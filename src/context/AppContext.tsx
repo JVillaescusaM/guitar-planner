@@ -12,7 +12,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup     
 } from 'firebase/auth';
-import { collection, query, where, getDocs, setDoc, doc, deleteDoc } from 'firebase/firestore';
+import { collection, query, where, getDocs, onSnapshot, setDoc, doc, deleteDoc } from 'firebase/firestore';
 
 
 export interface Exercise {
@@ -141,16 +141,20 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [presets, setPresets] = useState<Preset[]>([]); // Estado para las Planificaciones
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+    let unsubscribeSessions = () => {};
+
+    const unsubscribeAuth = onAuthStateChanged(auth, async (currentUser) => {
+      unsubscribeSessions();
       setUser(currentUser);
       if (currentUser) {
-        // 1. Descargar Historial de Sesiones
+        // 1. Historial de sesiones en tiempo real (evita datos obsoletos tras asignaciones del maestro)
         try {
           const qSessions = query(collection(db, 'sessions'), where('userId', '==', currentUser.uid));
-          const querySnapshot = await getDocs(qSessions);
-          const history: SessionRecord[] = [];
-          querySnapshot.forEach((doc) => history.push({ id: doc.id, ...doc.data() } as SessionRecord));
-          setSessionHistory(history);
+          unsubscribeSessions = onSnapshot(qSessions, (snapshot) => {
+            const history: SessionRecord[] = [];
+            snapshot.forEach((d) => history.push({ id: d.id, ...d.data() } as SessionRecord));
+            setSessionHistory(history);
+          }, (err) => console.error("Error historial:", err));
         } catch (err) { console.error("Error historial:", err); }
 
         // 2. Descargar Rutinas (Mías + Públicas + Asignadas a mí)
@@ -175,7 +179,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
             const usersList: Student[] = [];
             snapUsers.forEach(doc => {
               if (doc.data().email !== 'jvillaescusam@gmail.com') {
-                usersList.push(doc.data() as Student);
+                usersList.push({ uid: doc.id, ...doc.data() } as Student);
               }
             });
             setStudents(usersList);
@@ -204,7 +208,10 @@ export function AppProvider({ children }: { children: ReactNode }) {
       }
       setLoadingAuth(false);
     });
-    return () => unsubscribe();
+    return () => {
+      unsubscribeAuth();
+      unsubscribeSessions();
+    };
   }, []);
 
   const login = async (email: string, pass: string) => {
@@ -236,6 +243,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
       // Creamos su ficha de base de datos en Firestore
       await setDoc(doc(db, 'users', newUser.uid), {
+        uid: newUser.uid,
         email: newUser.email,
         role: 'student',
         createdAt: new Date().toISOString()
@@ -254,45 +262,26 @@ export function AppProvider({ children }: { children: ReactNode }) {
   
   const logout = async () => { await signOut(auth); };
 
- 
-  const [isHistoryLoaded, setIsHistoryLoaded] = useState(false);
-
-  useEffect(() => {
-    Promise.resolve().then(() => {
-      const saved = localStorage.getItem('guitarPlanner_history');
-      if (saved) {
-        try {
-          setSessionHistory(JSON.parse(saved));
-        } catch (e) {
-          console.error("Error leyendo historial", e);
-        }
-      }
-      setIsHistoryLoaded(true); 
-    });
-  }, []);
-
-  useEffect(() => {
-    if (isHistoryLoaded) {
-      localStorage.setItem('guitarPlanner_history', JSON.stringify(sessionHistory));
-    }
-  }, [sessionHistory, isHistoryLoaded]);
-
   const addToRoutine = (exercise: Exercise) => {
     setRoutine((prev) => [...prev, exercise]);
   };
 
   const addExercisesToDay = (date: Date, name: string, exercisesToAdd: Exercise[]) => {
+    if (!user?.uid) return;
+    const newId = Math.random().toString(36).substring(2, 11);
     const newRecord: SessionRecord = {
-      id: Math.random().toString(36).substr(2, 9),
-      technique: name, 
+      id: newId,
+      technique: name,
       date: date.toISOString(),
-      durationSeconds: 0, 
+      durationSeconds: 0,
       bpm: 60,
       status: 'Pendiente',
       isPreset: true,
-      exercises: exercisesToAdd
+      exercises: exercisesToAdd,
+      userId: user.uid,
     };
     setSessionHistory(prev => [...prev, newRecord]);
+    setDoc(doc(db, 'sessions', newId), newRecord);
   };
 
  const updateSessionRecord = (id: string, updates: Partial<SessionRecord>) => {

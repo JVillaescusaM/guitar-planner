@@ -200,7 +200,7 @@ const isToday = useMemo(() => {
             actionButton={
               !viewingSession?.id ? (
                 <div className="w-full bg-slate-900/50 border border-dashed border-slate-700/50 text-slate-500 font-black text-[9px] uppercase tracking-widest py-3.5 rounded-xl text-center">
-                  Añade la rutina al día (+) para empezar
+                  Elige una sesión en la agenda o asigna una rutina desde el Escaparate
                 </div>
               ) : !isPastOrToday ? (
                 <div className="w-full bg-slate-900 border border-slate-800 text-slate-500 font-black text-[9px] uppercase tracking-widest py-3.5 rounded-xl text-center">
