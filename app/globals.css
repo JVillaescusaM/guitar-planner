@@ -20,10 +20,12 @@ html, body {
   }
 }
 
-/* Sala de práctica: en móvil apaisado, usar toda la altura útil */
-@media (max-width: 767px) and (orientation: landscape) {
+/* Sala de práctica en móvil: el main no debe hacer scroll por detrás */
+@media (max-width: 767px) {
   main:has(.practice-room) {
-    min-height: 100dvh;
+    overflow: hidden !important;
+    height: calc(100dvh - 3.5rem);
+    min-height: 0;
   }
 }
 

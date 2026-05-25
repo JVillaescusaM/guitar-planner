@@ -834,7 +834,7 @@ useEffect(() => {
 
   return (
 
-    <div className="practice-room flex h-full w-full bg-slate-900 text-slate-200 overflow-hidden font-sans relative">
+    <div className="practice-room max-md:fixed max-md:left-0 max-md:right-0 max-md:top-14 max-md:bottom-0 max-md:z-20 flex flex-col md:flex-row h-full min-h-0 w-full bg-slate-900 text-slate-200 overflow-hidden font-sans relative">
 
       {isPortraitMobile && (
         <div className="fixed inset-0 z-[200] flex flex-col items-center justify-center bg-slate-950 p-8 text-center md:hidden">
@@ -852,12 +852,12 @@ useEffect(() => {
 
       <aside 
   className={`
-    fixed inset-y-0 left-0 z-50 w-64 bg-slate-800 border-r border-slate-700/50 shadow-2xl transition-transform duration-300 ease-in-out
-    md:static md:w-72 md:z-20 md:shadow-xl md:translate-x-0
+    fixed inset-y-0 left-0 z-50 w-[min(72vw,16rem)] max-md:top-14 bg-slate-800 border-r border-slate-700/50 shadow-2xl transition-transform duration-300 ease-in-out flex flex-col min-h-0
+    md:static md:w-72 md:z-20 md:shadow-xl md:translate-x-0 md:top-auto
     ${isLeftMenuOpen ? 'translate-x-0' : '-translate-x-full'}
   `}
 >
-        <div className="p-4 border-b border-slate-700/50 text-center">
+        <div className="p-2 md:p-4 border-b border-slate-700/50 text-center shrink-0">
 
           <h1 className="text-xs font-black tracking-widest text-blue-400 uppercase truncate">
 
@@ -869,7 +869,7 @@ useEffect(() => {
 
         
 
-        <div className="flex-1 overflow-y-auto p-3 space-y-2">
+        <div className="flex-1 min-h-0 overflow-y-auto p-2 md:p-3 space-y-1.5 md:space-y-2">
 
           {sessionName && routine.length > 0 ? (
 
@@ -974,16 +974,14 @@ useEffect(() => {
 
             <>
 
-              <header className="h-10 border-b border-slate-700/50 flex items-center justify-between px-4 bg-slate-800 shrink-0">
-  {/* Botón para abrir menú izquierdo (Solo móvil) */}
-  <button onClick={() => setIsLeftMenuOpen(true)} className="md:hidden p-2 text-slate-400">
+              <header className="h-8 md:h-10 border-b border-slate-700/50 flex items-center justify-between px-2 md:px-4 bg-slate-800 shrink-0 gap-2">
+  <button onClick={() => setIsLeftMenuOpen(true)} className="md:hidden p-1.5 text-slate-400 shrink-0" aria-label="Lista de ejercicios">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
   </button>
 
-  <h2 className="text-[10px] font-black uppercase tracking-widest text-slate-400">{activeExercise.title}</h2>
+  <h2 className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-slate-400 truncate flex-1 text-center min-w-0">{activeExercise.title}</h2>
   
-  {/* Botón para abrir menú derecho (Solo móvil) */}
-  <button onClick={() => setIsRightMenuOpen(true)} className="md:hidden p-2 text-slate-400">
+  <button onClick={() => setIsRightMenuOpen(true)} className="md:hidden p-1.5 text-slate-400 shrink-0" aria-label="Metrónomo">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M15 2l3 3M9 2l-3 3M12 15c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"/></svg>
   </button>
 </header>
@@ -998,37 +996,39 @@ useEffect(() => {
 
           ) : sessionName ? (
 
-            <div className="flex-1 flex flex-col items-center justify-center bg-slate-900 p-10 z-30">
+            <div className="flex-1 flex flex-col items-center justify-center bg-slate-900 p-3 md:p-10 z-30 min-h-0 overflow-y-auto">
 
-              <div className="text-center max-w-sm w-full">
+              <div className="text-center max-w-sm w-full max-md:max-w-none max-md:flex max-md:flex-row max-md:items-center max-md:gap-4 max-md:px-2">
 
-                <h2 className="text-2xl font-black uppercase tracking-tighter text-blue-400 mb-2">Preparación</h2>
+                <div className="max-md:flex-1">
+                <h2 className="text-lg md:text-2xl font-black uppercase tracking-tighter text-blue-400 mb-1 md:mb-2">Preparación</h2>
 
-                <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-10">Afina antes de arrancar</p>
+                <p className="text-[9px] md:text-[10px] font-black text-slate-500 uppercase tracking-widest mb-3 md:mb-10">Afina antes de arrancar</p>
 
-                <div className="bg-slate-800 border border-slate-700/50 rounded-3xl p-8 mb-10 shadow-2xl shadow-black/20 flex flex-col items-center gap-6 relative overflow-hidden">
+                <div className="bg-slate-800 border border-slate-700/50 rounded-2xl md:rounded-3xl p-4 md:p-8 mb-3 md:mb-10 shadow-2xl shadow-black/20 flex flex-col items-center gap-3 md:gap-6 relative overflow-hidden">
 
                   {isTuning && <div className="absolute inset-0 bg-blue-500/10 animate-pulse" />}
 
-                  <span className={`text-6xl transition-transform duration-500 ${isTuning ? 'scale-110 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]' : 'grayscale opacity-30'}`}>🎸</span>
+                  <span className={`text-4xl md:text-6xl transition-transform duration-500 ${isTuning ? 'scale-110 drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]' : 'grayscale opacity-30'}`}>🎸</span>
 
-                  <button onClick={toggleTuning} className={`relative z-50 px-6 py-3 rounded-xl font-black text-[10px] uppercase tracking-widest transition-all cursor-pointer shadow-lg ${isTuning ? 'bg-blue-600 text-white shadow-blue-500/30' : 'bg-slate-900 text-slate-400 border border-slate-700 hover:text-slate-200'}`}>
+                  <button onClick={toggleTuning} className={`relative z-50 px-4 py-2 md:px-6 md:py-3 rounded-xl font-black text-[9px] md:text-[10px] uppercase tracking-widest transition-all cursor-pointer shadow-lg ${isTuning ? 'bg-blue-600 text-white shadow-blue-500/30' : 'bg-slate-900 text-slate-400 border border-slate-700 hover:text-slate-200'}`}>
 
-                    {isTuning ? 'DETENER LA' : 'ESCUCHAR LA (440Hz)'}
+                    {isTuning ? 'DETENER LA' : 'LA 440Hz'}
 
                   </button>
 
+                </div>
                 </div>
 
                 <button 
 
                   onClick={() => { if (isTuning) toggleTuning(); setActiveExercise(routine[0]); setIsPrep(true); setTime(6); setTimerActive(true); }} 
 
-                  className="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-black text-[10px] uppercase tracking-widest py-4 rounded-xl cursor-pointer transition-all shadow-lg shadow-emerald-600/20"
+                  className="w-full max-md:w-auto max-md:shrink-0 max-md:px-6 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-[9px] md:text-[10px] uppercase tracking-widest py-3 md:py-4 rounded-xl cursor-pointer transition-all shadow-lg shadow-emerald-600/20"
 
                 >
 
-                  ARRANCAR SESIÓN
+                  ARRANCAR
 
                 </button>
 
@@ -1068,37 +1068,39 @@ useEffect(() => {
 
         {/* 3. FOOTER (EL COCKPIT) */}
 
-        <footer className="h-24 bg-slate-800 border-t border-slate-700/50 flex items-center justify-between px-8 lg:px-12 shrink-0 z-50 shadow-[0_-10px_30px_rgba(0,0,0,0.2)]">
+        <footer className="shrink-0 z-50 bg-slate-800 border-t border-slate-700/50 shadow-[0_-6px_20px_rgba(0,0,0,0.25)] max-md:py-2 max-md:px-2 md:h-24 md:px-8 lg:px-12 md:flex md:items-center md:justify-between">
 
           {sessionName && activeExercise ? (
 
-            <>
+            <div className="flex flex-col gap-2 max-md:w-full md:contents">
 
-              <div className="flex items-center gap-6 lg:gap-10">
+              <div className="flex items-center justify-between gap-2 max-md:w-full md:gap-10">
 
-                <div className="flex flex-col items-center min-w-20">
+                <div className="flex items-center gap-2 md:gap-10">
 
-                  <span className={`font-mono text-3xl font-black tracking-tighter leading-none ${isPrep ? 'text-orange-400 animate-pulse' : (timerActive ? 'text-emerald-400' : 'text-yellow-400')}`}>
+                <div className="flex flex-col items-center min-w-[3.5rem] md:min-w-20">
+
+                  <span className={`font-mono text-xl md:text-3xl font-black tracking-tighter leading-none ${isPrep ? 'text-orange-400 animate-pulse' : (timerActive ? 'text-emerald-400' : 'text-yellow-400')}`}>
 
                     {Math.floor(time / 60).toString().padStart(2, '0')}:{(time % 60).toString().padStart(2, '0')}
 
                   </span>
 
-                  <span className="text-[8px] font-black text-slate-500 uppercase tracking-widest mt-1.5">{isPrep ? 'Preparación' : 'Tiempo'}</span>
+                  <span className="text-[7px] md:text-[8px] font-black text-slate-500 uppercase tracking-widest mt-0.5 md:mt-1.5">{isPrep ? 'Prep' : 'Tiempo'}</span>
 
                 </div>
 
-                <div className="flex gap-3">
+                <div className="flex gap-1.5 md:gap-3">
 
-                  <button onClick={() => setTimerActive(!timerActive)} className={`w-12 h-12 lg:w-14 lg:h-14 rounded-xl flex items-center justify-center transition-all cursor-pointer shadow-lg ${timerActive ? 'bg-slate-900 text-yellow-400 shadow-black/30' : 'bg-blue-600 text-white shadow-blue-600/20'}`}>
+                  <button onClick={() => setTimerActive(!timerActive)} className={`w-9 h-9 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-lg md:rounded-xl flex items-center justify-center transition-all cursor-pointer shadow-lg ${timerActive ? 'bg-slate-900 text-yellow-400 shadow-black/30' : 'bg-blue-600 text-white shadow-blue-600/20'}`}>
 
                     {timerActive ? (
 
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                      <svg className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
 
                     ) : (
 
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                      <svg className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
 
                     )}
 
@@ -1108,59 +1110,62 @@ useEffect(() => {
 
                     onClick={handleAbortSession}
 
-                    className="w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-slate-900 text-red-400 border border-slate-700/50 flex items-center justify-center hover:bg-red-500/20 hover:text-red-400 hover:border-red-500/30 cursor-pointer transition-all shadow-sm group"
+                    className="w-9 h-9 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-lg md:rounded-xl bg-slate-900 text-red-400 border border-slate-700/50 flex items-center justify-center hover:bg-red-500/20 cursor-pointer transition-all shadow-sm group"
 
                   >
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="group-hover:scale-110 transition-transform"><rect x="6" y="6" width="12" height="12"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 md:w-5 md:h-5" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="6" width="12" height="12"/></svg>
 
                   </button>
 
+                </div>
+                </div>
+
+                <div className="flex md:hidden items-center gap-1 shrink-0">
+                  <button type="button" onClick={() => setIsLeftMenuOpen(true)} className="px-2 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-[8px] font-black uppercase text-slate-400">Lista</button>
+                  <button type="button" onClick={() => { setIsRightMenuOpen(true); setIsPlaying(false); }} className="px-2 py-1.5 rounded-lg bg-slate-900 border border-slate-700 text-[8px] font-black uppercase text-slate-400">{bpm} BPM</button>
                 </div>
 
               </div>
 
 
 
-              <div className="flex items-center gap-4 lg:gap-6 bg-slate-900 p-2.5 px-6 rounded-2xl border border-slate-700/50 shadow-inner">
+              <div className="flex items-center gap-2 max-md:w-full md:gap-6 bg-slate-900 max-md:py-1.5 max-md:px-2 md:p-2.5 md:px-6 rounded-xl md:rounded-2xl border border-slate-700/50 shadow-inner">
 
-                
+                <div className="flex flex-col shrink-0">
 
+                  <span className="text-[7px] md:text-[8px] font-black text-slate-500 uppercase tracking-widest mb-0.5">BPM</span>
 
-
-                <div className="flex flex-col">
-
-                  <span className="text-[8px] font-black text-slate-500 uppercase tracking-widest mb-1">Registrar BPM</span>
-
-                  <input type="number" placeholder={bpm.toString()} value={recordBpm} onChange={(e) => setRecordBpm(e.target.value)} className="bg-transparent text-slate-200 font-black text-xl outline-none w-16 lg:w-20 placeholder:text-slate-600" />
+                  <input type="number" placeholder={bpm.toString()} value={recordBpm} onChange={(e) => setRecordBpm(e.target.value)} className="bg-transparent text-slate-200 font-black text-base md:text-xl outline-none w-12 md:w-20 placeholder:text-slate-600" />
 
                 </div>
 
-                <button onClick={handleCompleteExercise} className="bg-emerald-600 hover:bg-emerald-500 text-white font-black text-[9px] lg:text-[10px] uppercase tracking-widest px-6 py-3.5 rounded-xl cursor-pointer transition-all shadow-lg shadow-emerald-600/20">
+                <button onClick={handleCompleteExercise} className="flex-1 md:flex-none bg-emerald-600 hover:bg-emerald-500 text-white font-black text-[8px] md:text-[10px] uppercase tracking-widest px-3 py-2 md:px-6 md:py-3.5 rounded-lg md:rounded-xl cursor-pointer transition-all shadow-lg shadow-emerald-600/20 whitespace-nowrap">
 
-                  {isLast ? 'Finalizar Sesión' : 'Marcar como Acabado'}
+                  <span className="md:hidden">{isLast ? 'Finalizar' : 'Acabado'}</span>
+                  <span className="hidden md:inline">{isLast ? 'Finalizar Sesión' : 'Marcar como Acabado'}</span>
 
                 </button>
 
               </div>
 
-            </>
+            </div>
 
           ) : (
 
-            <div className="w-full flex justify-between items-center opacity-40">
+            <div className="w-full flex justify-between items-center opacity-40 max-md:py-1 px-1">
 
-               <div className="flex items-center gap-10">
+               <div className="flex items-center gap-3 md:gap-10">
 
-                 <span className="font-mono text-3xl font-black text-slate-700">00:00</span>
+                 <span className="font-mono text-xl md:text-3xl font-black text-slate-700">00:00</span>
 
-                 <div className="w-12 h-12 rounded-xl border-2 border-dashed border-slate-700 flex items-center justify-center text-[9px] font-black text-slate-600 uppercase tracking-tighter">OFF</div>
+                 <div className="w-9 h-9 md:w-12 md:h-12 rounded-lg md:rounded-xl border-2 border-dashed border-slate-700 flex items-center justify-center text-[8px] md:text-[9px] font-black text-slate-600 uppercase tracking-tighter">OFF</div>
 
                </div>
 
-               <span className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-600">Sistemas en Standby</span>
+               <span className="text-[8px] md:text-[10px] font-black uppercase tracking-widest md:tracking-[0.5em] text-slate-600 max-md:hidden">Sistemas en Standby</span>
 
-               <div className="w-32 h-1.5 bg-slate-800 rounded-full overflow-hidden"><div className="w-1/2 h-full bg-slate-700 animate-pulse" /></div>
+               <div className="w-20 md:w-32 h-1 bg-slate-800 rounded-full overflow-hidden"><div className="w-1/2 h-full bg-slate-700 animate-pulse" /></div>
 
             </div>
 
@@ -1176,20 +1181,20 @@ useEffect(() => {
 
       <aside 
   className={`
-    fixed inset-y-0 right-0 z-50 w-64 bg-slate-800 p-6 border-l border-slate-700/50 shadow-2xl transition-transform duration-300 ease-in-out
-    md:static md:w-72 md:z-20 md:shadow-2xl md:translate-x-0
+    fixed inset-y-0 right-0 z-50 w-[min(72vw,16rem)] max-md:top-14 bg-slate-800 p-3 md:p-6 border-l border-slate-700/50 shadow-2xl transition-transform duration-300 ease-in-out flex flex-col min-h-0 overflow-y-auto
+    md:static md:w-72 md:z-20 md:shadow-2xl md:translate-x-0 md:top-auto
     ${isRightMenuOpen ? 'translate-x-0' : 'translate-x-full'}
   `}
 >
-        <h3 className="text-[10px] font-black text-slate-400 uppercase mb-8 text-center tracking-widest">Metrónomo</h3>
+        <h3 className="text-[9px] md:text-[10px] font-black text-slate-400 uppercase mb-3 md:mb-8 text-center tracking-widest shrink-0">Metrónomo</h3>
 
-        <div className="flex flex-col items-center gap-8">
+        <div className="flex flex-col items-center gap-3 md:gap-8">
 
-          <div className="flex gap-1 bg-slate-900 p-1.5 rounded-xl w-full border border-slate-700/50 shadow-inner">
+          <div className="flex gap-0.5 md:gap-1 bg-slate-900 p-1 md:p-1.5 rounded-lg md:rounded-xl w-full border border-slate-700/50 shadow-inner">
 
             {[0, 1, 2, 3, 4, 5].map((b) => (
 
-              <button key={b} onClick={() => { setMaxBeats(b); setBeat(0); }} className={`flex-1 py-2 text-[10px] font-black rounded-lg cursor-pointer transition-all ${maxBeats === b ? 'bg-blue-600 text-white shadow-md' : 'text-slate-500 hover:text-slate-300'}`}>
+              <button key={b} onClick={() => { setMaxBeats(b); setBeat(0); }} className={`flex-1 py-1 md:py-2 text-[8px] md:text-[10px] font-black rounded-md md:rounded-lg cursor-pointer transition-all ${maxBeats === b ? 'bg-blue-600 text-white shadow-md' : 'text-slate-500 hover:text-slate-300'}`}>
 
                 {b === 0 ? '∞' : b}
 
@@ -1199,11 +1204,11 @@ useEffect(() => {
 
           </div>
 
-          <div className="flex gap-2.5">
+          <div className="flex gap-1.5 md:gap-2.5">
 
             {maxBeats > 0 && Array.from({ length: maxBeats }).map((_, i) => (
 
-              <div key={i} className={`w-3 h-3 rounded-full transition-all duration-100 ${beat === i && isPlaying ? 'bg-blue-500 scale-125 shadow-[0_0_10px_rgba(59,130,246,0.6)]' : 'bg-slate-700'}`} />
+              <div key={i} className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-all duration-100 ${beat === i && isPlaying ? 'bg-blue-500 scale-125 shadow-[0_0_10px_rgba(59,130,246,0.6)]' : 'bg-slate-700'}`} />
 
             ))}
 
@@ -1211,17 +1216,17 @@ useEffect(() => {
 
           <div className="text-center">
 
-            <span className="text-5xl lg:text-6xl font-black block text-slate-200 leading-none">{bpm}</span>
+            <span className="text-3xl md:text-5xl lg:text-6xl font-black block text-slate-200 leading-none">{bpm}</span>
 
-            <span className="text-[9px] text-slate-500 font-black tracking-widest uppercase mt-3 block">BPM</span>
+            <span className="text-[8px] md:text-[9px] text-slate-500 font-black tracking-widest uppercase mt-1 md:mt-3 block">BPM</span>
 
           </div>
 
           <input type="range" min="40" max="240" value={bpm} onChange={(e) => setBpm(parseInt(e.target.value))} className="w-full cursor-pointer accent-blue-500 h-1.5 bg-slate-700 rounded-lg appearance-none" />
 
-          <button onClick={() => setIsPlaying(!isPlaying)} className={`w-full py-4 rounded-xl font-black text-[10px] uppercase tracking-widest cursor-pointer transition-all shadow-lg ${isPlaying ? 'bg-slate-900 text-yellow-400 shadow-black/30' : 'bg-blue-600 text-white shadow-blue-600/20'}`}>
+          <button onClick={() => setIsPlaying(!isPlaying)} className={`w-full py-2.5 md:py-4 rounded-lg md:rounded-xl font-black text-[8px] md:text-[10px] uppercase tracking-widest cursor-pointer transition-all shadow-lg ${isPlaying ? 'bg-slate-900 text-yellow-400 shadow-black/30' : 'bg-blue-600 text-white shadow-blue-600/20'}`}>
 
-            {isPlaying ? 'Detener Beat' : 'Iniciar Metrónomo'}
+            {isPlaying ? 'Detener' : 'Metrónomo'}
 
           </button>
 
@@ -1232,7 +1237,7 @@ useEffect(() => {
 {/* Fondo oscuro al abrir menús en móvil */}
 {(isLeftMenuOpen || isRightMenuOpen) && (
   <div 
-    className="fixed inset-0 bg-black/50 z-40 md:hidden" 
+    className="fixed inset-0 bg-black/50 z-40 md:hidden max-md:top-14" 
     onClick={() => { setIsLeftMenuOpen(false); setIsRightMenuOpen(false); }} 
   />
 )}
