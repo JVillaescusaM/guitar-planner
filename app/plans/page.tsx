@@ -76,7 +76,7 @@ export default function PlansPage() {
 // 1️⃣ PESTAÑA: CONSTRUCTOR DE RUTINAS SUELTAS
 // =========================================================================
 function RoutineConstructor() {
-  const { routine, addToRoutine, removeFromRoutine, saveCurrentRoutine, clearRoutine } = useApp();
+  const { routine, addToRoutine, removeFromRoutine, saveCurrentRoutine, clearRoutine, reorderRoutine } = useApp();
   const [filter, setFilter] = useState<string>('TODOS');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [routineName, setRoutineName] = useState<string>('');
@@ -114,12 +114,16 @@ function RoutineConstructor() {
             </div>
           ) : (
             routine.map((ej, idx) => (
-              <div key={`${ej.id}-${idx}`} className="bg-slate-800/80 border border-slate-700/40 rounded-xl p-3 flex justify-between items-center group shadow-sm">
-                <div className="min-w-0 pr-2">
+              <div key={`${ej.instanceId || ej.id}-${idx}`} className="bg-slate-800/80 border border-slate-700/40 rounded-xl p-3 flex justify-between items-center group shadow-sm gap-2">
+                <div className="min-w-0 flex-1 pr-2">
                   <span className="text-[8px] font-black text-emerald-400 uppercase tracking-widest block mb-0.5">{idx + 1}. {ej.mainTechnique}</span>
                   <span className="text-[10px] font-bold text-slate-200 uppercase truncate block">{ej.title}</span>
                 </div>
-                <button onClick={() => removeFromRoutine(ej.id)} className="text-[9px] font-black text-red-500 bg-red-500/10 px-2 py-1 rounded cursor-pointer hover:bg-red-500/20">X</button>
+                <div className="flex gap-1 shrink-0">
+                  <button onClick={() => reorderRoutine(idx, idx - 1)} disabled={idx === 0} className="text-[10px] font-black text-slate-400 bg-slate-900 px-2 py-1 rounded cursor-pointer hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors">↑</button>
+                  <button onClick={() => reorderRoutine(idx, idx + 1)} disabled={idx === routine.length - 1} className="text-[10px] font-black text-slate-400 bg-slate-900 px-2 py-1 rounded cursor-pointer hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-colors">↓</button>
+                  <button onClick={() => removeFromRoutine(ej.instanceId || ej.id)} className="text-[9px] font-black text-red-500 bg-red-500/10 px-2 py-1 rounded cursor-pointer hover:bg-red-500/20 ml-1 transition-colors">X</button>
+                </div>
               </div>
             ))
           )}
@@ -170,15 +174,14 @@ function RoutineConstructor() {
               </thead>
               <tbody className="divide-y divide-slate-800/60 text-[11px]">
                 {filteredExercises.map((ej) => {
-                  const isInRoutine = routine.some(r => r.id === ej.id);
                   return (
                     <tr key={ej.id} className="hover:bg-slate-800/40 transition-colors">
                       <td className="p-3 text-slate-600 font-black text-center">{ej.id}</td>
                       <td className="p-3 font-bold text-slate-300 uppercase">{ej.title}</td>
                       <td className="p-3 hidden md:table-cell"><span className="text-[8px] font-black text-emerald-400 bg-emerald-500/5 border border-emerald-500/10 px-2 py-0.5 rounded uppercase">{ej.mainTechnique}</span></td>
                       <td className="p-3 text-center">
-                        <button onClick={() => addToRoutine(ej)} disabled={isInRoutine} className={`w-full py-1.5 rounded-lg text-[8px] font-black uppercase tracking-wider transition-all cursor-pointer ${isInRoutine ? 'bg-slate-900 text-slate-600 border border-slate-800' : 'bg-emerald-600 text-white hover:bg-emerald-500'}`}>
-                          {isInRoutine ? 'Añadido' : '+ Agregar'}
+                        <button onClick={() => addToRoutine(ej)} className="w-full py-1.5 rounded-lg text-[8px] font-black uppercase tracking-wider transition-all cursor-pointer bg-emerald-600 text-white hover:bg-emerald-500">
+                          + Agregar
                         </button>
                       </td>
                     </tr>

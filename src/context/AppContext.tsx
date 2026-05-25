@@ -30,6 +30,7 @@ export interface Exercise {
   collection?: string;
   videoId?: string;
   recommendedBpm?: number;
+  instanceId?: string; // NUEVO: Identificador único para el carrito
 }
 
 export interface ExerciseStats {
@@ -106,6 +107,7 @@ interface AppContextType {
   removeFromRoutine: (id: string | number) => void;
   clearRoutine: () => void;
   loadRoutine: (newRoutine: Exercise[], name?: string) => void;
+  reorderRoutine: (startIndex: number, endIndex: number) => void;
   sessionHistory: SessionRecord[];
   addSessionRecord: (record: Omit<SessionRecord, 'id' | 'date'>) => string; 
   savedRoutines: SavedRoutine[];
@@ -263,7 +265,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const logout = async () => { await signOut(auth); };
 
   const addToRoutine = (exercise: Exercise) => {
-    setRoutine((prev) => [...prev, exercise]);
+    setRoutine((prev) => [...prev, { ...exercise, instanceId: Math.random().toString(36).substring(2, 11) }]);
   };
 
   const addExercisesToDay = (date: Date, name: string, exercisesToAdd: Exercise[]) => {
@@ -298,8 +300,16 @@ export function AppProvider({ children }: { children: ReactNode }) {
     );
   };
 
-  const removeFromRoutine = (id: string | number) => {
-    setRoutine((prev) => prev.filter((ex) => ex.id !== id));
+  const removeFromRoutine = (identifier: string | number) => {
+    setRoutine((prev) => prev.filter((ex) => (ex.instanceId ? ex.instanceId !== identifier : ex.id !== identifier)));
+  };
+const reorderRoutine = (startIndex: number, endIndex: number) => {
+    setRoutine((prev) => {
+      const result = Array.from(prev);
+      const [removed] = result.splice(startIndex, 1);
+      result.splice(endIndex, 0, removed);
+      return result;
+    });
   };
 
   const clearRoutine = () => {
@@ -447,7 +457,7 @@ const removeSessionRecord = (id: string) => {
   const contextValue = { 
     user, students, login, register, logout,
     activeExercise, setActiveExercise, activeSessionId, setActiveSessionId, updateSessionRecord,
-    routine, addToRoutine, addExercisesToDay, removeFromRoutine, sessionName, clearRoutine, loadRoutine,
+    routine, addToRoutine, addExercisesToDay, removeFromRoutine, sessionName, clearRoutine, loadRoutine, reorderRoutine,
     sessionHistory, addSessionRecord,
     savedRoutines, saveCurrentRoutine, deleteSavedRoutine,
     weeklyPlan, assignRoutineToDay, removeSessionRecord,
