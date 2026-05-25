@@ -77,10 +77,10 @@ export default function LibraryPage() {
   };
 
   return (
-    <div className="flex h-full w-full bg-slate-900 text-slate-200 font-sans overflow-hidden">
+    <div className="flex flex-col md:flex-row h-full w-full bg-slate-900 text-slate-200 font-sans overflow-hidden min-h-0">
       
-      {/* 📱 COLUMNA IZQUIERDA */}
-      <div className="w-105 border-r border-slate-800 flex flex-col h-full bg-slate-950/30 shrink-0">
+      {/* Panel filtros + listado */}
+      <div className="w-full md:w-80 lg:w-96 border-b md:border-b-0 md:border-r border-slate-800 flex flex-col h-[45vh] md:h-full bg-slate-950/30 shrink-0 min-h-0">
         
         {/* Cabecera de Filtros */}
         <div className="p-4 border-b border-slate-800 bg-slate-950/50 flex flex-col gap-3 shrink-0">
@@ -197,8 +197,7 @@ export default function LibraryPage() {
         </div>
       </div>
 
-      {/* 📺 COLUMNA DERECHA */}
-      <div className="flex-1 flex flex-col h-full bg-slate-900">
+      <div className="flex-1 flex flex-col min-h-0 h-full bg-slate-900">
         {selectedExercise ? (
           <>
             {/* 1. VISUALIZADOR SUPERIOR */}
@@ -220,7 +219,7 @@ export default function LibraryPage() {
             </div>
 
             {/* 2. MONITOR INFERIOR */}
-            <div className="h-85 bg-slate-950/40 p-6 overflow-y-auto flex flex-col gap-5 shrink-0 border-t border-slate-800/50">
+            <div className="min-h-48 max-h-[40vh] md:max-h-none md:h-85 bg-slate-950/40 p-4 md:p-6 overflow-y-auto flex flex-col gap-5 shrink-0 border-t border-slate-800/50">
               
               <div className="flex items-start justify-between border-b border-slate-800/60 pb-3.5">
                 <div className="flex flex-col gap-1">

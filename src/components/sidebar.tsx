@@ -22,10 +22,7 @@ export default function Sidebar() {
 
   return (
     <nav className="
-      /* 📱 COMPORTAMIENTO MÓVIL (Por defecto): Barra superior horizontal */
-      w-full h-14 bg-black border-b border-gray-800 flex flex-row items-center justify-between px-4 shrink-0 z-30
-      
-      /* 🖥️ COMPORTAMIENTO PC (A partir de md: 768px): Se transforma en barra lateral izquierda */
+      w-full h-14 bg-black border-b border-gray-800 flex flex-row items-center justify-between px-3 shrink-0 z-30
       md:w-16 md:h-full md:border-b-0 md:border-r md:flex-col md:py-8 md:px-0 md:gap-10 md:justify-start
     ">
       
@@ -36,11 +33,8 @@ export default function Sidebar() {
 
       {/* ENLACES DE NAVEGACIÓN */}
       <div className="
-        /* 📱 En móvil: Fila horizontal compacta a la derecha */
-        flex flex-row gap-2 items-center justify-end
-        
-        /* 🖥️ En PC: Columna vertical que ocupa el centro del sidebar */
-        md:flex-col md:gap-5 md:flex-1 md:w-full md:items-center md:justify-start
+        flex flex-row gap-1 items-center justify-end overflow-x-auto max-w-[calc(100%-3rem)] pb-0.5
+        md:overflow-visible md:max-w-none md:flex-col md:gap-5 md:flex-1 md:w-full md:items-center md:justify-start md:pb-0
       ">
         <Link href="/" className={linkClass("/", "text-blue-500")} title="Torre de Control">
           <Home size={20} className="md:w-[22px] md:h-[22px]" />
@@ -59,18 +53,15 @@ export default function Sidebar() {
           <ListVideo size={20} className="md:w-[22px] md:h-[22px]" />
         </Link>
         
-        {/* La Biblioteca pesada se mantiene oculta en móvil para aligerar la interfaz */}
-        <Link href="/library" className={`${linkClass("/library", "text-sky-500")} hidden md:flex`} title="Biblioteca de Consulta">
-          <BookOpen size={22} />
+        <Link href="/library" className={linkClass("/library", "text-sky-500")} title="Biblioteca de Consulta">
+          <BookOpen size={20} className="md:w-[22px] md:h-[22px]" />
         </Link>
 
-        {/* SEPARADOR VISUAL ANTES DEL MODO MAESTRO (Solo tiene sentido en el orden vertical de PC) */}
         {isMaster && <div className="hidden md:block w-8 h-px bg-slate-800/60 my-2" />}
 
-        {/* ACCESOS EXCLUSIVOS DEL MAESTRO */}
         {isMaster && (
-          <Link href="/plans" className={`${linkClass("/plans", "text-emerald-500")} hidden md:flex`} title="La Forja Maestra">
-            <Hammer size={22} />
+          <Link href="/plans" className={linkClass("/plans", "text-emerald-500")} title="La Forja Maestra">
+            <Hammer size={20} className="md:w-[22px] md:h-[22px]" />
           </Link>
         )}
       </div>

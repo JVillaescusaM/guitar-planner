@@ -29,13 +29,11 @@ export const viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className={`${geistSans.variable} ${geistMono.variable} h-full`}>
-      <body className="h-full w-full flex bg-gray-950 overflow-hidden">
+      <body className="h-full w-full flex flex-col md:flex-row bg-gray-950 overflow-hidden">
         <AppProvider>
-          {/* NUESTRA NUEVA BARRA LATERAL INTELIGENTE */}
           <Sidebar />
 
-          {/* CONTENEDOR DE PÁGINA */}
-          <main className="flex-1 h-full overflow-y-auto min-w-0">
+          <main className="flex-1 min-h-0 w-full overflow-y-auto overflow-x-hidden">
             {children}
           </main>
         </AppProvider>

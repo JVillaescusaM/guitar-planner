@@ -48,7 +48,7 @@ export default function CatalogPage() {
   };
 
   return (
-    <div className="flex-1 flex flex-col h-screen bg-slate-900 font-sans overflow-hidden text-slate-200">
+    <div className="flex flex-col h-full min-h-0 bg-slate-900 font-sans overflow-hidden text-slate-200">
       
       {/* CABECERA DEL ESCAPARATE */}
       <header className="bg-slate-950 border-b border-slate-800 p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shrink-0">
@@ -85,10 +85,9 @@ export default function CatalogPage() {
       )}
 
       {/* CONTENIDO PRINCIPAL */}
-      <div className="flex-1 flex overflow-hidden p-6 gap-6">
+      <div className="flex-1 flex flex-col lg:flex-row overflow-hidden p-4 md:p-6 gap-4 md:gap-6 min-h-0">
         
-        {/* COLUMNA IZQUIERDA: LISTADO DE TARJETAS */}
-        <div className="flex-1 overflow-y-auto custom-scrollbar pr-2">
+        <div className="flex-1 overflow-y-auto custom-scrollbar pr-1 min-h-0">
           
           {activeSubTab === 'routines' && (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -168,8 +167,7 @@ const structuredDays = preset.days ? preset.days.map((d) => {
 
         </div>
 
-        {/* COLUMNA DERECHA: NUESTRO INSPECTOR DE CONSULTA PURA */}
-        <div className="w-80 shrink-0 hidden lg:block overflow-y-auto custom-scrollbar">
+        <div className="w-full lg:w-80 shrink-0 overflow-y-auto custom-scrollbar max-h-[40vh] lg:max-h-none border-t lg:border-t-0 border-slate-800 pt-4 lg:pt-0">
           {inspectingSession ? (
             <SessionInspector 
               name={inspectingSession.name}

@@ -240,7 +240,7 @@ export default function DeepProfileAnalyticsPage() {
   }, [sessionHistory]);
 
   return (
-    <div className="flex-1 h-screen bg-slate-900 font-sans flex flex-col overflow-hidden text-slate-200">
+    <div className="flex flex-col h-full min-h-0 bg-slate-900 font-sans overflow-hidden text-slate-200">
       
       {/* HEADER DE CONTROL */}
       <header className="bg-slate-950 border-b border-slate-800 p-5 shrink-0 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 shadow-md z-30">

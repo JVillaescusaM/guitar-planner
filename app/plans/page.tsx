@@ -27,7 +27,7 @@ export default function PlansPage() {
   }
 
   return (
-    <div className="flex-1 flex flex-col h-screen bg-slate-900 text-slate-200 overflow-hidden font-sans">
+    <div className="flex flex-col h-full min-h-0 bg-slate-900 text-slate-200 overflow-hidden font-sans">
       
       {/* MENÚ SUPERIOR DE LA FORJA */}
       <header className="bg-slate-950 border-b border-slate-800/80 p-6 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shrink-0 z-20">
