@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import {
   Play,
@@ -13,7 +13,12 @@ import {
   VolumeX,
   Trophy,
   Star,
+  Sparkles,
+  TrendingUp,
+  Zap,
 } from "lucide-react";
+import { doc, getDoc, setDoc, increment } from "firebase/firestore";
+import { db } from "../../src/lib/firebase";
 import {
   useApp,
   type Exercise,
@@ -112,9 +117,22 @@ export default function PracticePage() {
   const [showSummary, setShowSummary] = useState<boolean>(false);
   const [routineRating, setRoutineRating] = useState<number>(5);
   const [finalXP, setFinalXP] = useState<number>(0);
+  const [bonusXPAccumulated, setBonusXPAccumulated] = useState<number>(0);
   const [calculatedTotalTime, setCalculatedTotalTime] = useState<number>(0);
   const [recordBpm, setRecordBpm] = useState<string>("");
   const [isTuning, setIsTuning] = useState<boolean>(false);
+
+  // Refuerzo inmediato e intermitente
+  const [globalAvgBpm, setGlobalAvgBpm] = useState<number | null>(null);
+  const [prToast, setPrToast] = useState<{
+    title: string;
+    subtitle: string;
+  } | null>(null);
+  const [flashChallenge, setFlashChallenge] = useState<{
+    exerciseId: string;
+    targetBpm: number;
+    bonusXp: number;
+  } | null>(null);
 
   const [isLeftMenuOpen, setIsLeftMenuOpen] = useState(false);
   const [isRightMenuOpen, setIsRightMenuOpen] = useState(false);
@@ -135,6 +153,124 @@ export default function PracticePage() {
   const beatRef = useRef<number>(0);
   const sessionFinishedRef = useRef<boolean>(false);
 
+  // Historial del ejercicio activo (últimos 8 intentos ordenados cronológicamente)
+  const exerciseHistoryBpms = useMemo(() => {
+    if (!activeExercise) return [];
+    return sessionHistory
+      .filter((r) => r.exerciseStats && r.exerciseStats[activeExercise.id]?.bpm)
+      .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime())
+      .slice(-8)
+      .map((r) => ({
+        date: new Date(r.date).toLocaleDateString("es-ES", {
+          day: "2-digit",
+          month: "short",
+        }),
+        bpm: r.exerciseStats![activeExercise.id].bpm,
+      }));
+  }, [activeExercise, sessionHistory]);
+
+  const personalBestBpm = useMemo(() => {
+    if (exerciseHistoryBpms.length === 0) return null;
+    return Math.max(...exerciseHistoryBpms.map((item) => item.bpm));
+  }, [exerciseHistoryBpms]);
+
+  const lastAttemptBpm = useMemo(() => {
+    if (exerciseHistoryBpms.length === 0) return null;
+    return exerciseHistoryBpms[exerciseHistoryBpms.length - 1].bpm;
+  }, [exerciseHistoryBpms]);
+
+  // Progreso de la rutina (%)
+  const completedCount = useMemo(
+    () => routine.filter((ej) => !!completedExercises[ej.id]).length,
+    [routine, completedExercises],
+  );
+  const routineProgressPercent = useMemo(() => {
+    if (routine.length === 0) return 0;
+    return Math.round((completedCount / routine.length) * 100);
+  }, [completedCount, routine.length]);
+
+  // Sonido agradable para Nuevo Récord Personal o Reto Superado
+  const playSuccessChime = () => {
+    try {
+      if (!audioContext.current) {
+        const WinAudio = window as unknown as WindowWithAudio;
+        const AudioContextClass =
+          window.AudioContext || WinAudio.webkitAudioContext;
+        audioContext.current = new AudioContextClass();
+      }
+      if (audioContext.current.state === "suspended") {
+        audioContext.current.resume().catch(() => {});
+      }
+      const ctx = audioContext.current;
+      const now = ctx.currentTime;
+      [523.25, 659.25, 783.99].forEach((freq, idx) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = "triangle";
+        osc.frequency.value = freq;
+        gain.gain.setValueAtTime(0.001, now + idx * 0.08);
+        gain.gain.exponentialRampToValueAtTime(0.18, now + idx * 0.08 + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.08 + 0.35);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now + idx * 0.08);
+        osc.stop(now + idx * 0.08 + 0.36);
+      });
+    } catch {
+      /* ignore audio errors */
+    }
+  };
+
+  // Cargar media global del ejercicio desde Firestore (`exerciseBenchmarks/{id}`)
+  useEffect(() => {
+    if (!activeExercise) {
+      setGlobalAvgBpm(null);
+      return;
+    }
+    let cancelled = false;
+    const fetchBenchmark = async () => {
+      try {
+        const snap = await getDoc(
+          doc(db, "exerciseBenchmarks", activeExercise.id),
+        );
+        if (!cancelled && snap.exists()) {
+          const data = snap.data() as { totalBpmSum?: number; count?: number };
+          if (data.count && data.count > 0 && data.totalBpmSum) {
+            setGlobalAvgBpm(Math.round(data.totalBpmSum / data.count));
+            return;
+          }
+        }
+        if (!cancelled) setGlobalAvgBpm(null);
+      } catch {
+        if (!cancelled) setGlobalAvgBpm(null);
+      }
+    };
+    fetchBenchmark();
+    return () => {
+      cancelled = true;
+    };
+  }, [activeExercise]);
+
+  // Refuerzo intermitente: ~25% de probabilidad de Reto Relámpago al entrar a un ejercicio
+  useEffect(() => {
+    if (!activeExercise || completedExercises[activeExercise.id]) {
+      setFlashChallenge(null);
+      return;
+    }
+    const baseBpm = lastAttemptBpm || activeExercise.recommendedBpm || 80;
+    const roll = Math.random();
+    if (roll < 0.25) {
+      setFlashChallenge({
+        exerciseId: activeExercise.id,
+        targetBpm: Math.min(240, baseBpm + 4),
+        bonusXp: 25,
+      });
+    } else {
+      setFlashChallenge(null);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeExercise?.id]);
+
   // Orientación móvil
   useEffect(() => {
     const updateOrientation = () => {
@@ -154,22 +290,12 @@ export default function PracticePage() {
   // Memoria de velocidad por ejercicio
   useEffect(() => {
     if (!activeExercise) return;
-    const pastRecords = sessionHistory.filter(
-      (record) =>
-        record.exerciseStats && record.exerciseStats[activeExercise.id],
-    );
-    if (pastRecords.length > 0) {
-      const sorted = [...pastRecords].sort(
-        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-      );
-      const lastSavedBpm = sorted[0].exerciseStats?.[activeExercise.id]?.bpm;
-      if (lastSavedBpm) {
-        setBpm(lastSavedBpm);
-        return;
-      }
+    if (lastAttemptBpm) {
+      setBpm(lastAttemptBpm);
+    } else {
+      setBpm(activeExercise.recommendedBpm || 60);
     }
-    setBpm(activeExercise.recommendedBpm || 60);
-  }, [activeExercise, sessionHistory]);
+  }, [activeExercise, lastAttemptBpm]);
 
   // Snapshot para guardar progreso si sales sin acabar
   const stateSnapshot = useRef({
@@ -271,6 +397,48 @@ export default function PracticePage() {
     const finalTime = totalSessionTime + exerciseTime;
     const npmCalculated = finalBpm * (activeExercise.subdivision || 1);
 
+    // Actualizar media global de usuarios en segundo plano
+    setDoc(
+      doc(db, "exerciseBenchmarks", activeExercise.id),
+      {
+        totalBpmSum: increment(finalBpm),
+        count: increment(1),
+      },
+      { merge: true },
+    ).catch(() => {
+      /* Si las reglas de Firestore aún no habilitan esta colección, no bloqueamos nada */
+    });
+
+    // Comprobar Nuevo Récord Personal (PR) y Reto Relámpago
+    const isNewPR = personalBestBpm !== null && finalBpm > personalBestBpm;
+    const beatChallenge =
+      flashChallenge?.exerciseId === activeExercise.id &&
+      finalBpm >= flashChallenge.targetBpm;
+
+    let addedBonus = 0;
+    if (beatChallenge && flashChallenge) {
+      addedBonus += flashChallenge.bonusXp;
+    }
+    if (isNewPR) {
+      addedBonus += 15;
+    }
+
+    if (isNewPR || beatChallenge) {
+      playSuccessChime();
+      setPrToast({
+        title: beatChallenge
+          ? "¡Reto Relámpago superado!"
+          : `¡Nuevo Récord Personal: ${finalBpm} BPM!`,
+        subtitle: beatChallenge
+          ? `+${addedBonus} XP extra añadidos a tu sesión`
+          : `Has subido +${finalBpm - (personalBestBpm || 0)} BPM (+15 XP)`,
+      });
+      setTimeout(() => setPrToast(null), 4000);
+    }
+
+    const newBonusTotal = bonusXPAccumulated + addedBonus;
+    setBonusXPAccumulated(newBonusTotal);
+
     const newCompleted: Record<string, ExerciseStats> = {
       ...completedExercises,
       [activeExercise.id]: {
@@ -285,7 +453,7 @@ export default function PracticePage() {
     const allDone = !nextPending;
 
     const totalMinutes = Math.floor(finalTime / 60);
-    const earnedXP = totalMinutes * 10 + (allDone ? 50 : 0);
+    const earnedXP = totalMinutes * 10 + (allDone ? 50 : 0) + newBonusTotal;
 
     let currentSessionId = activeSessionId;
     const sessionUpdates: Partial<SessionRecord> = {
@@ -364,7 +532,7 @@ export default function PracticePage() {
       )
     ) {
       const finalTime = totalSessionTime + (isPrep ? 0 : time);
-      const earnedXP = Math.floor(finalTime / 60) * 10;
+      const earnedXP = Math.floor(finalTime / 60) * 10 + bonusXPAccumulated;
 
       const sessionUpdates: Partial<SessionRecord> = {
         status: "Inacabada",
@@ -414,7 +582,7 @@ export default function PracticePage() {
     return () => clearInterval(interval);
   }, [timerActive, isPrep]);
 
-  // Metrónomo estable sin deriva (no depende de `beat`)
+  // Metrónomo estable
   useEffect(() => {
     if (!isPlaying) {
       if (timerRef.current) clearInterval(timerRef.current);
@@ -515,6 +683,17 @@ export default function PracticePage() {
 
   return (
     <div className="practice-room max-md:fixed max-md:left-0 max-md:right-0 max-md:top-14 max-md:bottom-0 max-md:z-20 flex flex-col md:flex-row h-full min-h-0 w-full bg-slate-50 text-slate-900 overflow-hidden font-sans relative">
+      {/* Toast de Nuevo Récord / Reto Superado */}
+      {prToast && (
+        <div className="fixed top-4 left-1/2 -translate-x-1/2 z-[120] bg-emerald-600 text-white px-5 py-3 rounded-2xl shadow-lg flex items-center gap-3 animate-bounce">
+          <Sparkles size={18} />
+          <div>
+            <p className="text-xs font-bold leading-tight">{prToast.title}</p>
+            <p className="text-[11px] text-emerald-100">{prToast.subtitle}</p>
+          </div>
+        </div>
+      )}
+
       {isPortraitMobile && (
         <div className="fixed inset-0 z-[200] flex flex-col items-center justify-center bg-slate-50 p-8 text-center md:hidden">
           <div className="bg-white border border-slate-200 rounded-2xl p-6 max-w-xs shadow-sm space-y-2">
@@ -537,13 +716,34 @@ export default function PracticePage() {
           ${isLeftMenuOpen ? "translate-x-0" : "-translate-x-full"}
         `}
       >
-        <div className="p-4 border-b border-slate-200 shrink-0">
-          <span className="text-[11px] font-semibold text-indigo-600 block">
-            Sesión activa
-          </span>
-          <h1 className="text-sm font-bold text-slate-900 truncate mt-0.5">
-            {sessionName || "Sin sesión cargada"}
-          </h1>
+        <div className="p-4 border-b border-slate-200 shrink-0 space-y-2.5">
+          <div>
+            <span className="text-[11px] font-semibold text-indigo-600 block">
+              Sesión activa
+            </span>
+            <h1 className="text-sm font-bold text-slate-900 truncate mt-0.5">
+              {sessionName || "Sin sesión cargada"}
+            </h1>
+          </div>
+
+          {routine.length > 0 && (
+            <div className="space-y-1">
+              <div className="flex justify-between text-[11px] font-semibold">
+                <span className="text-slate-500">
+                  {completedCount}/{routine.length} ejercicios
+                </span>
+                <span className="text-indigo-600 tabular-nums">
+                  {routineProgressPercent}%
+                </span>
+              </div>
+              <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-indigo-600 rounded-full transition-all duration-500"
+                  style={{ width: `${routineProgressPercent}%` }}
+                />
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="flex-1 min-h-0 overflow-y-auto p-3 space-y-2 custom-scrollbar">
@@ -610,27 +810,68 @@ export default function PracticePage() {
         <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
           {activeExercise ? (
             <>
-              <header className="h-11 border-b border-slate-200 flex items-center justify-between px-3 md:px-4 bg-white shrink-0 gap-2">
-                <button
-                  onClick={() => setIsLeftMenuOpen(true)}
-                  className="md:hidden p-1.5 text-slate-600 hover:bg-slate-100 rounded-lg shrink-0"
-                  aria-label="Lista de ejercicios"
-                >
-                  <ListMusic size={18} />
-                </button>
+              <header className="border-b border-slate-200 bg-white shrink-0">
+                <div className="h-11 flex items-center justify-between px-3 md:px-4 gap-2">
+                  <button
+                    onClick={() => setIsLeftMenuOpen(true)}
+                    className="md:hidden p-1.5 text-slate-600 hover:bg-slate-100 rounded-lg shrink-0"
+                    aria-label="Lista de ejercicios"
+                  >
+                    <ListMusic size={18} />
+                  </button>
 
-                <h2 className="text-xs md:text-sm font-bold text-slate-900 truncate flex-1 text-center min-w-0">
-                  {activeExercise.title}
-                </h2>
+                  <h2 className="text-xs md:text-sm font-bold text-slate-900 truncate flex-1 text-center min-w-0">
+                    {activeExercise.title}
+                  </h2>
 
-                <button
-                  onClick={() => setIsRightMenuOpen(true)}
-                  className="md:hidden p-1.5 text-slate-600 hover:bg-slate-100 rounded-lg shrink-0"
-                  aria-label="Metrónomo"
-                >
-                  <Gauge size={18} />
-                </button>
+                  <div className="hidden md:flex items-center gap-2 shrink-0">
+                    <span className="text-xs font-bold text-indigo-600 bg-indigo-50 border border-indigo-200 px-2.5 py-0.5 rounded-full tabular-nums">
+                      {routineProgressPercent}% completado
+                    </span>
+                  </div>
+
+                  <button
+                    onClick={() => setIsRightMenuOpen(true)}
+                    className="md:hidden p-1.5 text-slate-600 hover:bg-slate-100 rounded-lg shrink-0"
+                    aria-label="Metrónomo"
+                  >
+                    <Gauge size={18} />
+                  </button>
+                </div>
+
+                {/* Barra fina de progreso visual en el borde inferior de la cabecera */}
+                <div className="w-full h-1 bg-slate-100">
+                  <div
+                    className="h-full bg-indigo-600 transition-all duration-500"
+                    style={{ width: `${routineProgressPercent}%` }}
+                  />
+                </div>
               </header>
+
+              {/* Reto Relámpago (Refuerzo intermitente) */}
+              {flashChallenge &&
+                flashChallenge.exerciseId === activeExercise.id && (
+                  <div className="bg-amber-50 border-b border-amber-200 px-4 py-2 flex items-center justify-between gap-2 shrink-0">
+                    <div className="flex items-center gap-2 text-xs text-amber-900">
+                      <Zap size={14} className="text-amber-600 shrink-0" />
+                      <span>
+                        <strong>Reto sorpresa:</strong> completa este ejercicio
+                        a{" "}
+                        <strong className="tabular-nums">
+                          {flashChallenge.targetBpm} BPM
+                        </strong>{" "}
+                        o más para ganar{" "}
+                        <strong>+{flashChallenge.bonusXp} XP extra</strong>.
+                      </span>
+                    </div>
+                    <button
+                      onClick={() => setBpm(flashChallenge.targetBpm)}
+                      className="text-[11px] font-bold bg-amber-600 hover:bg-amber-700 text-white px-2.5 py-1 rounded-lg cursor-pointer shrink-0 transition-colors"
+                    >
+                      Poner {flashChallenge.targetBpm} BPM
+                    </button>
+                  </div>
+                )}
 
               <div className="flex-1 relative bg-slate-200/70">
                 <iframe
@@ -777,19 +1018,20 @@ export default function PracticePage() {
         </footer>
       </main>
 
-      {/* 3. SIDEBAR DERECHO: METRÓNOMO */}
+      {/* 3. SIDEBAR DERECHO: METRÓNOMO + GRÁFICO DE EVOLUCIÓN */}
       <aside
         className={`
-          fixed inset-y-0 right-0 z-50 w-[min(75vw,18rem)] max-md:top-14 bg-white p-5 border-l border-slate-200 shadow-lg transition-transform duration-300 ease-in-out flex flex-col min-h-0 overflow-y-auto
+          fixed inset-y-0 right-0 z-50 w-[min(78vw,18.5rem)] max-md:top-14 bg-white p-5 border-l border-slate-200 shadow-lg transition-transform duration-300 ease-in-out flex flex-col min-h-0 overflow-y-auto custom-scrollbar gap-6
           md:static md:w-72 md:z-20 md:shadow-none md:translate-x-0 md:top-auto
           ${isRightMenuOpen ? "translate-x-0" : "translate-x-full"}
         `}
       >
-        <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-5 text-center">
-          Metrónomo
-        </h3>
+        {/* Bloque Metrónomo */}
+        <div className="flex flex-col items-center gap-5">
+          <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider text-center">
+            Metrónomo
+          </h3>
 
-        <div className="flex flex-col items-center gap-6">
           <div className="flex gap-1 bg-slate-100 p-1 rounded-xl w-full">
             {[0, 1, 2, 3, 4, 5].map((b) => (
               <button
@@ -828,12 +1070,12 @@ export default function PracticePage() {
             <span className="text-5xl font-bold block text-slate-900 tabular-nums leading-none">
               {bpm}
             </span>
-            <span className="text-xs font-semibold text-slate-400 mt-1.5 block">
+            <span className="text-xs font-semibold text-slate-400 mt-1 block">
               BPM
             </span>
           </div>
 
-          <div className="w-full space-y-3">
+          <div className="w-full space-y-2.5">
             <input
               type="range"
               min="40"
@@ -842,16 +1084,23 @@ export default function PracticePage() {
               onChange={(e) => setBpm(parseInt(e.target.value, 10))}
               className="w-full cursor-pointer accent-indigo-600"
             />
-            <div className="flex justify-between gap-2">
+            <div className="grid grid-cols-3 gap-1.5">
               <button
                 onClick={() => setBpm((b) => Math.max(40, b - 5))}
-                className="flex-1 py-1.5 text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg cursor-pointer"
+                className="py-1.5 text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg cursor-pointer"
               >
                 -5
               </button>
               <button
+                onClick={() => setBpm((b) => Math.min(240, b + 2))}
+                className="py-1.5 text-xs font-bold bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 rounded-lg cursor-pointer"
+                title="Escalada rápida"
+              >
+                +2
+              </button>
+              <button
                 onClick={() => setBpm((b) => Math.min(240, b + 5))}
-                className="flex-1 py-1.5 text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg cursor-pointer"
+                className="py-1.5 text-xs font-semibold bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-lg cursor-pointer"
               >
                 +5
               </button>
@@ -869,6 +1118,48 @@ export default function PracticePage() {
             {isPlaying ? "Detener" : "Iniciar metrónomo"}
           </button>
         </div>
+
+        {/* Bloque Gráfico de Evolución + Media Global */}
+        {activeExercise && (
+          <div className="pt-5 border-t border-slate-200 space-y-3">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-bold text-slate-700 flex items-center gap-1.5">
+                <TrendingUp size={14} className="text-indigo-600" />
+                Tu evolución
+              </span>
+              {personalBestBpm && (
+                <span className="text-[11px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full tabular-nums">
+                  PR: {personalBestBpm}
+                </span>
+              )}
+            </div>
+
+            <ExerciseProgressChart
+              history={exerciseHistoryBpms}
+              globalAvg={globalAvgBpm}
+              currentBpm={bpm}
+            />
+
+            <div className="grid grid-cols-2 gap-2 text-center">
+              <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-2">
+                <span className="text-[10px] font-medium text-slate-500 block">
+                  Última vez
+                </span>
+                <span className="text-xs font-bold text-slate-900 tabular-nums">
+                  {lastAttemptBpm ? `${lastAttemptBpm} BPM` : "—"}
+                </span>
+              </div>
+              <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-2">
+                <span className="text-[10px] font-medium text-slate-500 block">
+                  Media global
+                </span>
+                <span className="text-xs font-bold text-amber-600 tabular-nums">
+                  {globalAvgBpm ? `${globalAvgBpm} BPM` : "Sin datos"}
+                </span>
+              </div>
+            </div>
+          </div>
+        )}
       </aside>
 
       {(isLeftMenuOpen || isRightMenuOpen) && (
@@ -995,6 +1286,126 @@ export default function PracticePage() {
           </div>
         </div>
       )}
+    </div>
+  );
+}
+
+// =========================================================================
+// MINI-GRÁFICO SVG DE EVOLUCIÓN DE BPM + MEDIA GLOBAL
+// =========================================================================
+function ExerciseProgressChart({
+  history,
+  globalAvg,
+  currentBpm,
+}: {
+  history: { date: string; bpm: number }[];
+  globalAvg: number | null;
+  currentBpm: number;
+}) {
+  if (history.length === 0) {
+    return (
+      <div className="bg-slate-50 border border-dashed border-slate-200 rounded-xl p-4 text-center">
+        <p className="text-[11px] text-slate-400">
+          Completa este ejercicio por primera vez para empezar tu gráfica de
+          evolución.
+        </p>
+      </div>
+    );
+  }
+
+  const width = 220;
+  const height = 88;
+  const padX = 14;
+  const padY = 14;
+
+  const allValues = [
+    ...history.map((h) => h.bpm),
+    ...(globalAvg ? [globalAvg] : []),
+    currentBpm,
+  ];
+  const minVal = Math.min(...allValues) - 5;
+  const maxVal = Math.max(...allValues) + 5;
+  const range = Math.max(10, maxVal - minVal);
+
+  const getY = (val: number) =>
+    height - padY - ((val - minVal) / range) * (height - padY * 2);
+
+  const points = history.map((item, idx) => {
+    const x =
+      history.length === 1
+        ? width / 2
+        : padX + (idx / (history.length - 1)) * (width - padX * 2);
+    return { x, y: getY(item.bpm), ...item };
+  });
+
+  const polylinePoints = points.map((p) => `${p.x},${p.y}`).join(" ");
+  const avgY = globalAvg ? getY(globalAvg) : null;
+
+  return (
+    <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-2.5">
+      <svg
+        viewBox={`0 0 ${width} ${height}`}
+        className="w-full h-24 overflow-visible"
+      >
+        {/* Línea punteada de media global */}
+        {avgY !== null && (
+          <g>
+            <line
+              x1={padX}
+              y1={avgY}
+              x2={width - padX}
+              y2={avgY}
+              stroke="#f59e0b"
+              strokeWidth="1.5"
+              strokeDasharray="4 3"
+            />
+            <text
+              x={width - padX}
+              y={avgY - 4}
+              textAnchor="end"
+              className="fill-amber-600 text-[9px] font-bold"
+            >
+              Media {globalAvg}
+            </text>
+          </g>
+        )}
+
+        {/* Línea de progreso del usuario */}
+        {points.length > 1 && (
+          <polyline
+            fill="none"
+            stroke="#4f46e5"
+            strokeWidth="2.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            points={polylinePoints}
+          />
+        )}
+
+        {/* Puntos */}
+        {points.map((p, i) => (
+          <g key={i}>
+            <circle
+              cx={p.x}
+              cy={p.y}
+              r={i === points.length - 1 ? 4 : 3}
+              className={
+                i === points.length - 1
+                  ? "fill-indigo-600"
+                  : "fill-white stroke-indigo-600"
+              }
+              strokeWidth="2"
+            >
+              <title>{`${p.date}: ${p.bpm} BPM`}</title>
+            </circle>
+          </g>
+        ))}
+      </svg>
+
+      <div className="flex justify-between text-[10px] text-slate-400 px-1 mt-1">
+        <span>{history[0].date}</span>
+        <span>Último: {history[history.length - 1].bpm} BPM</span>
+      </div>
     </div>
   );
 }
