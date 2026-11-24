@@ -5,7 +5,10 @@ import { AppProvider } from "../src/context/AppContext";
 import Sidebar from "../src/components/sidebar";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Guitar Planner",
@@ -14,25 +17,31 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     title: "Guitar Planner",
-    statusBarStyle: "black-translucent",
+    statusBarStyle: "default",
   },
 };
 
 export const viewport = {
-  themeColor: "#030712", // Coincide con tu color bg-gray-950
+  themeColor: "#ffffff",
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1, // Evita que al hacer doble tap rápido en el móvil se haga un zoom molesto
+  maximumScale: 1,
   userScalable: false,
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="es" className={`${geistSans.variable} ${geistMono.variable} h-full`}>
-      <body className="h-full w-full flex flex-col md:flex-row bg-gray-950 overflow-hidden">
+    <html
+      lang="es"
+      className={`${geistSans.variable} ${geistMono.variable} h-full`}
+    >
+      <body className="h-full w-full flex flex-col md:flex-row bg-slate-50 text-slate-900 overflow-hidden">
         <AppProvider>
           <Sidebar />
-
           <main className="flex-1 min-h-0 w-full overflow-y-auto overflow-x-hidden">
             {children}
           </main>
