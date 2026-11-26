@@ -1,10 +1,10 @@
 import { DrumMachine } from "smplr";
-
 export type PaloId =
   | "tangoTrad"
   | "rumba"
   | "modernoSwing"
   | "fandangosBasico"
+  | "fandangosSoniquete"
   | "click";
 
 export type HitType =
@@ -17,6 +17,8 @@ export type HitType =
   | "medio"
   | "flojo"
   | "muyFlojo"
+  | "ta"
+  | "taStaccato"
   | "clickHi"
   | "clickLo"
   | null;
@@ -77,6 +79,93 @@ export const PALOS: Record<PaloId, PaloConfig> = {
       null, // 10, 11 (seco + bombo suave + eco), 12
     ],
   },
+
+  fandangosSoniquete: {
+    id: "fandangosSoniquete",
+    label: "Fandangos (soniquete)",
+    stepsPerBar: 72, // 12 tiempos x 6 (seisillos para que el ta-ca vaya rápido y pegado)
+    beatsPerBar: 12,
+    defaultSwing: 0,
+    pattern: [
+      // Compás 1: Bum ... ta-ca-tÁ ... ta-ca-tÁ (R)
+      "cuerpo",
+      null,
+      null,
+      null,
+      "ta",
+      "taStaccato",
+      "medio",
+      null,
+      null,
+      null,
+      "ta",
+      "taStaccato",
+      "muyFlojo",
+      null,
+      null,
+      null,
+      null,
+      null,
+      // Compás 2
+      "cuerpoSuave",
+      null,
+      null,
+      null,
+      "ta",
+      "taStaccato",
+      "medio",
+      null,
+      null,
+      null,
+      "ta",
+      "taStaccato",
+      "muyFlojo",
+      null,
+      null,
+      null,
+      null,
+      null,
+      // Compás 3
+      "cuerpoSuave",
+      null,
+      null,
+      null,
+      "ta",
+      "taStaccato",
+      "medio",
+      null,
+      null,
+      null,
+      "ta",
+      "taStaccato",
+      "muyFlojo",
+      null,
+      null,
+      null,
+      null,
+      null,
+      // Compás 4: Bum ... ta-ca-tÁ (R)(R)
+      "cuerpoSuave",
+      null,
+      null,
+      null,
+      "ta",
+      "taStaccato",
+      "secoEco",
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+    ],
+  },
+
   click: {
     id: "click",
     label: "Click clásico",
@@ -114,6 +203,14 @@ function createRoomImpulse(
 }
 
 export class FlamencoAudioEngine {
+  private timerId: number | null = null;
+  private nextNoteTime = 0;
+  private currentStep = 0;
+  private isRunning = false;
+  private currentConfig: PaloConfig = PALOS.tangoTrad;
+  private currentBpm = 120;
+  private currentSwing = 0;
+  private onStepCallback: ((step: number) => void) | null = null;
   private ctx: AudioContext | null = null;
   private percBus: GainNode | null = null;
   private dryBus: GainNode | null = null;
@@ -205,7 +302,82 @@ export class FlamencoAudioEngine {
       );
     }
   }
+  public start(
+    config: PaloConfig,
+    bpm: number,
+    swing: number,
+    onStep?: (step: number) => void,
+  ) {
+    const ctx = this.ensureContext();
+    this.stop();
+    this.currentConfig = config;
+    this.currentBpm = bpm;
+    this.currentSwing = swing;
+    this.onStepCallback = onStep ?? null;
+    this.currentStep = 0;
+    this.nextNoteTime = ctx.currentTime + 0.05;
+    this.isRunning = true;
+    this.timerId = window.setInterval(() => this.scheduler(), 25);
+  }
 
+  public updateParams(config: PaloConfig, bpm: number, swing: number) {
+    this.currentConfig = config;
+    this.currentBpm = bpm;
+    this.currentSwing = swing;
+  }
+
+  public stop() {
+    this.isRunning = false;
+    if (this.timerId !== null) {
+      clearInterval(this.timerId);
+      this.timerId = null;
+    }
+  }
+
+  private scheduler() {
+    if (!this.ctx || !this.isRunning) return;
+    const scheduleAheadTime = 0.1; // 100ms de colchón
+
+    while (this.nextNoteTime < this.ctx.currentTime + scheduleAheadTime) {
+      const stepsPerBar = this.currentConfig.stepsPerBar;
+      const step = this.currentStep % stepsPerBar;
+      const hit = this.currentConfig.pattern[step];
+
+      if (hit) {
+        this.playHit(hit, this.nextNoteTime);
+      }
+
+      // Solo refresca la UI en pulsos visibles (evita 72 renders por compás)
+      const stepsPerBeat = stepsPerBar / this.currentConfig.beatsPerBar;
+      if (
+        this.onStepCallback &&
+        (stepsPerBeat <= 2 || step % stepsPerBeat === 0)
+      ) {
+        const delayMs = Math.max(
+          0,
+          (this.nextNoteTime - this.ctx.currentTime) * 1000,
+        );
+        const uiStep = step;
+        window.setTimeout(() => {
+          if (this.isRunning) this.onStepCallback?.(uiStep);
+        }, delayMs);
+      }
+
+      const beatSec = 60 / this.currentBpm;
+      const stepSec = beatSec / stepsPerBeat;
+      let dur = stepSec;
+
+      if (stepsPerBeat === 2) {
+        dur =
+          step % 2 === 0
+            ? stepSec * (1 + this.currentSwing)
+            : stepSec * (1 - this.currentSwing);
+      }
+
+      this.nextNoteTime += dur;
+      this.currentStep = (step + 1) % stepsPerBar;
+    }
+  }
   private playClickSound(ctx: AudioContext, hi: boolean, t: number) {
     const osc = ctx.createOscillator();
     const gain = ctx.createGain();
@@ -242,7 +414,6 @@ export class FlamencoAudioEngine {
         this.drumsWet.start({ note: "clap", velocity: 120, time: t });
         break;
       case "seco":
-        // Fuerte y seco: palma cortada + stick directo sin reverb
         this.drumsDry.start({
           note: "clap",
           velocity: 115,
@@ -252,28 +423,28 @@ export class FlamencoAudioEngine {
         this.drumsDry.start({ note: "stick", velocity: 90, time: t });
         break;
       case "medio":
-        this.drumsWet.start({ note: "clap", velocity: 72, time: t });
+        this.drumsWet.start({ note: "clap", velocity: 75, time: t });
         break;
       case "flojo":
-        // Palma sorda / floja (sin bongo)
         this.drumsWet.start({
           note: "clap",
           velocity: 40,
           time: t,
           duration: 0.06,
         });
+        break;
+      case "muyFlojo":
+        this.drumsWet.start({ note: "clap", velocity: 66, time: t });
+        break;
       case "cuerpo":
-        // 1: Fuerte con bombo
         this.drumsWet.start({ note: "kick", velocity: 118, time: t });
         this.drumsWet.start({ note: "clap", velocity: 120, time: t });
         break;
       case "cuerpoSuave":
-        // 4 y 7: Fuerte con un toque de bombo más flojo que el 1
         this.drumsWet.start({ note: "kick", velocity: 68, time: t });
         this.drumsWet.start({ note: "clap", velocity: 120, time: t });
         break;
       case "secoEco":
-        // 11: Fuerte y seco + bombo suave + eco que cae en el 12
         this.drumsWet.start({ note: "kick", velocity: 68, time: t });
         this.drumsWet.start({
           note: "clap",
@@ -283,13 +454,21 @@ export class FlamencoAudioEngine {
         });
         this.drumsWet.start({ note: "stick", velocity: 95, time: t });
         break;
-      case "medio":
-        // 2, 5, 8: Normal
-        this.drumsWet.start({ note: "clap", velocity: 75, time: t });
+      case "ta":
+        this.drumsWet.start({
+          note: "stick",
+          velocity: 32,
+          time: t,
+          duration: 0.03,
+        });
         break;
-      case "muyFlojo":
-        // 3, 6, 9: Milimétricamente más flojo que 'medio' (66 vs 75)
-        this.drumsWet.start({ note: "clap", velocity: 66, time: t });
+      case "taStaccato":
+        this.drumsWet.start({
+          note: "stick",
+          velocity: 28,
+          time: t,
+          duration: 0.016,
+        });
         break;
     }
   }

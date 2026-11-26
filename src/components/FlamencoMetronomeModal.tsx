@@ -25,12 +25,6 @@ export default function FlamencoMetronomeModal({
   const [currentStep, setCurrentStep] = useState(-1);
 
   const engineRef = useRef<FlamencoAudioEngine | null>(null);
-  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const paramsRef = useRef({ paloId, bpm, swing, isPlaying });
-
-  useEffect(() => {
-    paramsRef.current = { paloId, bpm, swing, isPlaying };
-  }, [paloId, bpm, swing, isPlaying]);
 
   const getEngine = () => {
     if (!engineRef.current) {
@@ -45,55 +39,23 @@ export default function FlamencoMetronomeModal({
     }
   }, [reverb]);
 
+  // Arranca / para el motor con reloj hardware de Web Audio
   useEffect(() => {
-    if (!isPlaying) {
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-      return;
+    if (isPlaying) {
+      const engine = getEngine();
+      engine.setReverb(reverb);
+      engine.start(PALOS[paloId], bpm, swing, (step) => setCurrentStep(step));
+      return () => engine.stop();
+    } else {
+      engineRef.current?.stop();
     }
-
-    const engine = getEngine();
-    engine.setReverb(reverb);
-    let step = 0;
-
-    const tick = () => {
-      const {
-        paloId: pId,
-        bpm: curBpm,
-        swing: curSwing,
-        isPlaying: playing,
-      } = paramsRef.current;
-      if (!playing) return;
-
-      const config = PALOS[pId];
-      const safeStep = step % config.stepsPerBar;
-      const hit = config.pattern[safeStep];
-
-      engine.playHit(hit);
-      setCurrentStep(safeStep);
-
-      const beatMs = 60000 / curBpm;
-      const isEighths = config.stepsPerBar === config.beatsPerBar * 2;
-      let delayMs = beatMs;
-
-      if (isEighths) {
-        const halfBeat = beatMs / 2;
-        delayMs =
-          safeStep % 2 === 0
-            ? halfBeat * (1 + curSwing)
-            : halfBeat * (1 - curSwing);
-      }
-
-      step = (safeStep + 1) % config.stepsPerBar;
-      timeoutRef.current = setTimeout(tick, Math.max(40, delayMs));
-    };
-
-    tick();
-
-    return () => {
-      if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isPlaying]);
+
+  // Actualiza palo, BPM o swing en caliente sin cortar el compás
+  useEffect(() => {
+    engineRef.current?.updateParams(PALOS[paloId], bpm, swing);
+  }, [paloId, bpm, swing]);
 
   const handleClose = () => {
     setIsPlaying(false);
@@ -177,31 +139,47 @@ export default function FlamencoMetronomeModal({
             {/* Visualizador de pasos */}
             <div className="bg-slate-50 border border-slate-200/80 rounded-xl p-3">
               <div className="flex justify-between gap-1">
-                {activeConfig.pattern.map((hit, idx) => {
-                  const active = isPlaying && currentStep === idx;
-                  const hasHit = hit !== null;
-                  const label =
-                    activeConfig.stepsPerBar === 8
-                      ? STEP_LABELS_8[idx]
-                      : activeConfig.id === "fandangosBasico"
-                        ? String((idx % 3) + 1)
-                        : String(idx + 1);
+                {(() => {
+                  const stepsPerBeat =
+                    activeConfig.stepsPerBar / activeConfig.beatsPerBar;
+                  const isSubdivided12 = activeConfig.stepsPerBar > 12;
+                  const totalBoxes = isSubdivided12
+                    ? activeConfig.beatsPerBar
+                    : activeConfig.stepsPerBar;
 
-                  return (
-                    <div
-                      key={idx}
-                      className={`flex-1 h-9 rounded-lg flex items-center justify-center text-xs font-bold transition-all ${
-                        active
-                          ? "bg-indigo-600 text-white scale-105 shadow-xs"
-                          : hasHit
-                            ? "bg-white border border-slate-300 text-slate-800"
-                            : "bg-slate-100/70 text-slate-300"
-                      }`}
-                    >
-                      {label}
-                    </div>
-                  );
-                })}
+                  return Array.from({ length: totalBoxes }).map((_, idx) => {
+                    const active =
+                      isPlaying &&
+                      (isSubdivided12
+                        ? Math.floor(currentStep / stepsPerBeat) === idx
+                        : currentStep === idx);
+                    const hit = isSubdivided12
+                      ? activeConfig.pattern[idx * stepsPerBeat]
+                      : activeConfig.pattern[idx];
+                    const hasHit = hit !== null;
+                    const label =
+                      activeConfig.stepsPerBar === 8
+                        ? STEP_LABELS_8[idx]
+                        : activeConfig.beatsPerBar === 12
+                          ? String((idx % 3) + 1)
+                          : String(idx + 1);
+
+                    return (
+                      <div
+                        key={idx}
+                        className={`flex-1 h-9 rounded-lg flex items-center justify-center text-xs font-bold transition-all ${
+                          active
+                            ? "bg-indigo-600 text-white scale-105 shadow-xs"
+                            : hasHit
+                              ? "bg-white border border-slate-300 text-slate-800"
+                              : "bg-slate-100/70 text-slate-300"
+                        }`}
+                      >
+                        {label}
+                      </div>
+                    );
+                  });
+                })()}
               </div>
             </div>
 
