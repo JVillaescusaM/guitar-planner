@@ -11,6 +11,7 @@ import {
   BookOpen,
 } from "lucide-react";
 import { useApp } from "../context/AppContext";
+import FlamencoMetronomeModal from "./FlamencoMetronomeModal";
 
 export default function Sidebar() {
   const { user } = useApp();
@@ -99,6 +100,11 @@ export default function Sidebar() {
             <Hammer size={20} />
           </Link>
         )}
+
+        {/* Botón del Laboratorio de Compás (abajo del todo en PC) */}
+        <div className="md:mt-auto md:pt-4">
+          <FlamencoMetronomeModal iconOnly />
+        </div>
       </div>
     </nav>
   );

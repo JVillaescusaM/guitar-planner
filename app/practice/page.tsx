@@ -223,10 +223,7 @@ export default function PracticePage() {
 
   // Cargar media global del ejercicio desde Firestore (`exerciseBenchmarks/{id}`)
   useEffect(() => {
-    if (!activeExercise) {
-      setGlobalAvgBpm(null);
-      return;
-    }
+    if (!activeExercise) return;
     let cancelled = false;
     const fetchBenchmark = async () => {
       try {
@@ -253,21 +250,28 @@ export default function PracticePage() {
 
   // Refuerzo intermitente: ~25% de probabilidad de Reto Relámpago al entrar a un ejercicio
   useEffect(() => {
-    if (!activeExercise || completedExercises[activeExercise.id]) {
-      setFlashChallenge(null);
-      return;
-    }
-    const baseBpm = lastAttemptBpm || activeExercise.recommendedBpm || 80;
-    const roll = Math.random();
-    if (roll < 0.25) {
-      setFlashChallenge({
-        exerciseId: activeExercise.id,
-        targetBpm: Math.min(240, baseBpm + 4),
-        bonusXp: 25,
-      });
-    } else {
-      setFlashChallenge(null);
-    }
+    let cancelled = false;
+    Promise.resolve().then(() => {
+      if (cancelled) return;
+      if (!activeExercise || completedExercises[activeExercise.id]) {
+        setFlashChallenge(null);
+        return;
+      }
+      const baseBpm = lastAttemptBpm || activeExercise.recommendedBpm || 80;
+      const roll = Math.random();
+      if (roll < 0.25) {
+        setFlashChallenge({
+          exerciseId: activeExercise.id,
+          targetBpm: Math.min(240, baseBpm + 4),
+          bonusXp: 25,
+        });
+      } else {
+        setFlashChallenge(null);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeExercise?.id]);
 
@@ -287,14 +291,20 @@ export default function PracticePage() {
     };
   }, []);
 
-  // Memoria de velocidad por ejercicio
   useEffect(() => {
     if (!activeExercise) return;
-    if (lastAttemptBpm) {
-      setBpm(lastAttemptBpm);
-    } else {
-      setBpm(activeExercise.recommendedBpm || 60);
-    }
+    let cancelled = false;
+    Promise.resolve().then(() => {
+      if (cancelled) return;
+      if (lastAttemptBpm) {
+        setBpm(lastAttemptBpm);
+      } else {
+        setBpm(activeExercise.recommendedBpm || 60);
+      }
+    });
+    return () => {
+      cancelled = true;
+    };
   }, [activeExercise, lastAttemptBpm]);
 
   // Snapshot para guardar progreso si sales sin acabar
@@ -349,34 +359,43 @@ export default function PracticePage() {
   // Cargar progreso previo si reanudamos sesión
   useEffect(() => {
     if (routine.length === 0) return;
-    const prevCompleted: Record<string, ExerciseStats> = {};
-    let prevTime = 0;
+    let cancelled = false;
 
-    if (activeSessionId) {
-      const session = sessionHistory.find((s) => s.id === activeSessionId);
-      if (session) {
-        const rawData =
-          session.exerciseStats || session.completedExercisesData || {};
-        for (const [key, val] of Object.entries(rawData)) {
-          if (typeof val === "number") {
-            prevCompleted[key] = { bpm: val, timeSpent: 0, npm: val };
-          } else {
-            prevCompleted[key] = val as ExerciseStats;
+    Promise.resolve().then(() => {
+      if (cancelled) return;
+      const prevCompleted: Record<string, ExerciseStats> = {};
+      let prevTime = 0;
+
+      if (activeSessionId) {
+        const session = sessionHistory.find((s) => s.id === activeSessionId);
+        if (session) {
+          const rawData =
+            session.exerciseStats || session.completedExercisesData || {};
+          for (const [key, val] of Object.entries(rawData)) {
+            if (typeof val === "number") {
+              prevCompleted[key] = { bpm: val, timeSpent: 0, npm: val };
+            } else {
+              prevCompleted[key] = val as ExerciseStats;
+            }
           }
+          prevTime = session.durationSeconds || 0;
         }
-        prevTime = session.durationSeconds || 0;
       }
-    }
 
-    setCompletedExercises(prevCompleted);
-    setTotalSessionTime(prevTime);
+      setCompletedExercises(prevCompleted);
+      setTotalSessionTime(prevTime);
 
-    const isActiveValid =
-      activeExercise && routine.some((ej) => ej.id === activeExercise.id);
-    if (!isActiveValid && Object.keys(prevCompleted).length > 0) {
-      const firstPending = routine.find((ej) => !prevCompleted[ej.id]);
-      setActiveExercise(firstPending || routine[0]);
-    }
+      const isActiveValid =
+        activeExercise && routine.some((ej) => ej.id === activeExercise.id);
+      if (!isActiveValid && Object.keys(prevCompleted).length > 0) {
+        const firstPending = routine.find((ej) => !prevCompleted[ej.id]);
+        setActiveExercise(firstPending || routine[0]);
+      }
+    });
+
+    return () => {
+      cancelled = true;
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [routine, activeSessionId]);
 
